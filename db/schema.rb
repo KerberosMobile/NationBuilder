@@ -173,9 +173,9 @@ ActiveRecord::Schema.define(:version => 20091014144207) do
     t.datetime "created_at"
   end
 
-  add_index "branch_user_rankings", ["created_at"], :name => "index_branch_user_rankings_on_created_at"
+  #add_index "branch_user_rankings", ["created_at"], :name => "index_branch_user_rankings_on_created_at"
   add_index "branch_user_rankings", ["user_id", "branch_id"], :name => "branch_uranks_id"
-  add_index "branch_user_rankings", ["version"], :name => "index_branch_user_rankings_on_version"
+  #add_index "branch_user_rankings", ["version"], :name => "index_branch_user_rankings_on_version"
 
   create_table "branches", :force => true do |t|
     t.string   "name",               :limit => 20
@@ -987,9 +987,9 @@ ActiveRecord::Schema.define(:version => 20091014144207) do
     t.datetime "updated_at"
   end
 
-  add_index "user_rankings", ["created_at"], :name => "rankings_created_at_index"
+  #add_index "user_rankings", ["created_at"], :name => "rankings_created_at_index"
   add_index "user_rankings", ["user_id"], :name => "rankings_user_id"
-  add_index "user_rankings", ["version"], :name => "rankings_version_index"
+  #add_index "user_rankings", ["version"], :name => "rankings_version_index"
 
   create_table "users", :force => true do |t|
     t.string   "login",                         :limit => 40
@@ -1103,7 +1103,7 @@ ActiveRecord::Schema.define(:version => 20091014144207) do
   add_index "users", ["facebook_uid"], :name => "index_users_on_facebook_uid"
   add_index "users", ["partner_id"], :name => "user_partner_id"
   add_index "users", ["rss_code"], :name => "index_users_on_rss_code"
-  add_index "users", ["status"], :name => "status"
+  #add_index "users", ["status"], :name => "status"
   add_index "users", ["twitter_id"], :name => "index_users_on_twitter_id"
 
   create_table "votes", :force => true do |t|
@@ -1141,7 +1141,7 @@ ActiveRecord::Schema.define(:version => 20091014144207) do
   end
 
   add_index "webpages", ["feed_id"], :name => "index_webpages_on_feed_id"
-  add_index "webpages", ["status"], :name => "status"
+  #add_index "webpages", ["status"], :name => "status"
   add_index "webpages", ["user_id"], :name => "webpages_user_id_index"
 
   create_table "widgets", :force => true do |t|
