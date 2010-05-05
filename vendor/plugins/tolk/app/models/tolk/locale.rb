@@ -96,7 +96,7 @@ module Tolk
 
     def count_phrases_without_translation
       existing_ids = self.translations.all(:select => 'tolk_translations.phrase_id').map(&:phrase_id).uniq
-      Tolk::Phrase.count - existing_ids.count
+      Tolk::Phrase.count - existing_ids.size
     end
 
     def phrases_without_translation(page = nil, options = {})
