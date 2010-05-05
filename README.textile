@@ -59,8 +59,9 @@ heroku addons:add sendgrid
 
 You need an Amazon S3 account to store graphics, "get that here":http://aws.amazon.com/s3/.
 
-<pre><code>heroku config:add S3_ACCESS_KEY_ID='YOUR ACCESS KEY'
-heroku config:add S3_SECRET_ACCESS_KEY='YOUR SECRET ACCESS KEY'
+<pre><code>heroku config:add S3_KEY='YOUR ACCESS KEY'
+heroku config:add S3_SECRET='YOUR SECRET ACCESS KEY'
+heroku config:add S3_BUCKET='BUCKET IDENTIFIER'
 </code></pre>
 
 NationBuilder makes extensive use of the DelayedJob plugin, which costs $15/mo from heroku.  You can still get up and running and play around without installing DelayedJob, but the rankings will never update and a few features will not work.  To install DelayedJob just do this:
