@@ -1,3 +1,4 @@
+require 'government'
 class BranchEndorsement < ActiveRecord::Base
 
   belongs_to :branch

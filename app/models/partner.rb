@@ -7,7 +7,6 @@ class Partner < ActiveRecord::Base
   belongs_to :picture
   
   has_attached_file :logo, :styles => { :icon_96 => "96x96#", :icon_140 => "140x140#", :icon_180 => "180x180#", :medium  => "450x" }, 
-    :storage => :s3, :s3_credentials => S3_CONFIG, 
     :path => ":class/:attachment/:id/:style.:extension"
     
   validates_attachment_size :logo, :less_than => 5.megabytes
