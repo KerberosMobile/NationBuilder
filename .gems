@@ -8,3 +8,4 @@ will_paginate
 facebooker --version 1.0.53
 hoptoad_notifier
 memcached
+rmagick
