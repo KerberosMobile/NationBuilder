@@ -9,8 +9,6 @@ class UsersControllerTest < ActionController::TestCase
   # Then, you can remove it from this and the units test.
   include AuthenticatedTestHelper
 
-  fixtures :users
-
   def setup
     @controller = UsersController.new
     @request    = ActionController::TestRequest.new
@@ -65,11 +63,12 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   def test_should_activate_user
-    assert_nil User.authenticate('aaron', 'test')
-    get :activate, :activation_code => users(:aaron).activation_code
+    user = Factory(:user, :email => 'aaron@blabla.com')
+    assert_nil User.authenticate('aaron@blabla.com', 'toodeloo')
+    get :activate, :activation_code => user.activation_code
     assert_redirected_to '/'
     assert_not_nil flash[:notice]
-    assert_equal users(:aaron), User.authenticate('aaron', 'test')
+    assert_equal user, User.authenticate('aaron@blabla.com', 'toodeloo')
   end
   
   def test_should_not_activate_user_without_key
@@ -89,6 +88,6 @@ class UsersControllerTest < ActionController::TestCase
   protected
     def create_user(options = {})
       post :create, :user => { :login => 'quire', :email => 'quire@example.com',
-        :password => 'quire', :password_confirmation => 'quire' }.merge(options)
+        :password => 'quire', :password_confirmation => 'quire', :locale => 'en' }.merge(options)
     end
 end

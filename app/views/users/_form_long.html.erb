@@ -51,6 +51,10 @@
 		</div>
 		<div class="small"><%= t('settings.edit.login.example')%></div>
 		</div>
+  	        <div class="field_label"><%= t('users.new.locale')%></div>
+		<div class="field_box">
+	  	  <%= select_tag 'user[locale]', options_for_select(User::LOCALES.unshift([t('users.new.select'),nil]),t('users.new.select')) %>
+		</div>
 
 		<div class="field">
 		<table border="0" cellspacing="0" cellpadding="0">

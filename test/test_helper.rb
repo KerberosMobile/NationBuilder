@@ -36,3 +36,18 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+require 'factory_girl'
+require 'factories'
+require 'mocha'
+
+class ActiveSupport::TestCase
+  def setup
+    current_government
+  end
+
+  def current_government
+    @gov ||= Factory(:government)
+    Government.stubs(:current).returns(@gov)
+  end
+end

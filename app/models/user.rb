@@ -126,6 +126,10 @@ class User < ActiveRecord::Base
   validates_length_of       :password, :within => 4..40, :if => [:should_validate_password?]
   validates_confirmation_of :password, :if => [:should_validate_password?]
 
+  validates_presence_of :locale
+  LOCALES = ['fr','nl','en','de']
+  validates_inclusion_of :locale, :in => LOCALES
+
   before_save :encrypt_password
   before_create :make_rss_code
   before_create :check_branch

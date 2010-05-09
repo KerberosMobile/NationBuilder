@@ -52,7 +52,8 @@ class InstallController < ApplicationController
   end
   
   def create_admin_user
-    @user = User.new(params[:user])
+    # we'll go with a default locale for the admin user
+    @user = User.new(params[:user].merge(:locale => 'en'))
     if @user.save
       cookies.delete :auth_token
       self.current_user = @user

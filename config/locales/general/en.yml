@@ -1436,6 +1436,8 @@ en:
             password:
                 label: "Password"
                 confirm: "and re-type it"
+            locale: "Language"
+            select: "Select one ..."
             error_message: "There was a problem creating your account"
         signups:
             title: "Email notifications for {{user_name}}"

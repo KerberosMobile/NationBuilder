@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091014144207) do
+ActiveRecord::Schema.define(:version => 20100506191248) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -173,9 +173,7 @@ ActiveRecord::Schema.define(:version => 20091014144207) do
     t.datetime "created_at"
   end
 
-  #add_index "branch_user_rankings", ["created_at"], :name => "index_branch_user_rankings_on_created_at"
   add_index "branch_user_rankings", ["user_id", "branch_id"], :name => "branch_uranks_id"
-  #add_index "branch_user_rankings", ["version"], :name => "index_branch_user_rankings_on_version"
 
   create_table "branches", :force => true do |t|
     t.string   "name",               :limit => 20
@@ -650,12 +648,12 @@ ActiveRecord::Schema.define(:version => 20091014144207) do
     t.string   "name",              :limit => 60
     t.string   "short_name",        :limit => 20
     t.integer  "picture_id"
-    t.integer  "is_optin",          :limit => 1,  :default => 0,         :null => false
+    t.integer  "is_optin",          :limit => 2,  :default => 0,         :null => false
     t.string   "optin_text",        :limit => 60
     t.string   "privacy_url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "is_active",         :limit => 1,  :default => 1,         :null => false
+    t.integer  "is_active",         :limit => 2,  :default => 1,         :null => false
     t.string   "status",                          :default => "passive"
     t.integer  "users_count",                     :default => 0
     t.string   "website"
@@ -924,6 +922,34 @@ ActiveRecord::Schema.define(:version => 20091014144207) do
   add_index "tags", ["slug"], :name => "index_tags_on_slug"
   add_index "tags", ["top_priority_id"], :name => "tag_top_priority_id_index"
 
+  create_table "tolk_locales", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tolk_locales", ["name"], :name => "index_tolk_locales_on_name", :unique => true
+
+  create_table "tolk_phrases", :force => true do |t|
+    t.text     "key"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tolk_phrases", ["key"], :name => "index_tolk_phrases_on_key", :unique => true
+
+  create_table "tolk_translations", :force => true do |t|
+    t.integer  "phrase_id"
+    t.integer  "locale_id"
+    t.text     "text"
+    t.text     "previous_text"
+    t.boolean  "primary_updated", :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tolk_translations", ["phrase_id", "locale_id"], :name => "index_tolk_translations_on_phrase_id_and_locale_id", :unique => true
+
   create_table "unsubscribes", :force => true do |t|
     t.integer  "user_id"
     t.string   "email"
@@ -987,9 +1013,7 @@ ActiveRecord::Schema.define(:version => 20091014144207) do
     t.datetime "updated_at"
   end
 
-  #add_index "user_rankings", ["created_at"], :name => "rankings_created_at_index"
   add_index "user_rankings", ["user_id"], :name => "rankings_user_id"
-  #add_index "user_rankings", ["version"], :name => "rankings_version_index"
 
   create_table "users", :force => true do |t|
     t.string   "login",                         :limit => 40
@@ -1098,12 +1122,12 @@ ActiveRecord::Schema.define(:version => 20091014144207) do
     t.datetime "buddy_icon_updated_at"
     t.boolean  "is_importing_contacts",                        :default => false
     t.integer  "imported_contacts_count",                      :default => 0
+    t.string   "locale",                        :limit => 5
   end
 
   add_index "users", ["facebook_uid"], :name => "index_users_on_facebook_uid"
   add_index "users", ["partner_id"], :name => "user_partner_id"
   add_index "users", ["rss_code"], :name => "index_users_on_rss_code"
-  #add_index "users", ["status"], :name => "status"
   add_index "users", ["twitter_id"], :name => "index_users_on_twitter_id"
 
   create_table "votes", :force => true do |t|
@@ -1141,7 +1165,6 @@ ActiveRecord::Schema.define(:version => 20091014144207) do
   end
 
   add_index "webpages", ["feed_id"], :name => "index_webpages_on_feed_id"
-  #add_index "webpages", ["status"], :name => "status"
   add_index "webpages", ["user_id"], :name => "webpages_user_id_index"
 
   create_table "widgets", :force => true do |t|
