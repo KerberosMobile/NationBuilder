@@ -24,6 +24,9 @@ class ApplicationController < ActionController::Base
     Government
   end
 
+  # multilingual app
+  before_filter :set_locale
+
   # switch to the right database for this government
   before_filter :check_subdomain
   
@@ -224,6 +227,19 @@ class ApplicationController < ActionController::Base
       format.html { redirect_to request.referrer||'/' }
       format.js { redirect_from_facebox(request.referrer||'/') }
     end    
+  end
+
+  def set_locale
+    default_locale = 'en'
+    locale = params[:locale] if params[:locale]
+    user_locale = current_user.locale if current_user
+    @locale = locale || user_locale || session[:locale] || default_locale
+    session[:locale] = @locale
+    begin
+      I18n.locale = @locale
+    rescue
+      I18n.locale = default_locale
+    end
   end
   
   def js_help
