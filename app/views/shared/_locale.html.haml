@@ -1,5 +1,5 @@
 .locales
-  = link_to 'en', url_for(:locale => 'en')
-  = link_to 'de', url_for(:locale => 'de')
-  = link_to 'nl', url_for(:locale => 'nl')
-  = link_to 'fr', url_for(:locale => 'fr')
+  = link_to 'en', url_for(:locale => 'en'), :class => I18n.locale == 'en' ? "current" : ""
+  = link_to 'de', url_for(:locale => 'de'), :class => I18n.locale == 'de' ? "current" : ""
+  = link_to 'nl', url_for(:locale => 'nl'), :class => I18n.locale == 'nl' ? "current" : ""
+  = link_to 'fr', url_for(:locale => 'fr'), :class => I18n.locale == 'fr' ? "current" : ""

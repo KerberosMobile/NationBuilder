@@ -1323,3 +1323,7 @@ ul#priority_menu li.tab9 div.tab_body {
   margin-right: 5px; /* spacing links */
   color: #000
 }
+
+.locales a.current {
+  color:#bc0000;
+}
