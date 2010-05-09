@@ -1122,7 +1122,7 @@ ActiveRecord::Schema.define(:version => 20100506191248) do
     t.datetime "buddy_icon_updated_at"
     t.boolean  "is_importing_contacts",                        :default => false
     t.integer  "imported_contacts_count",                      :default => 0
-    t.string   "locale",                        :limit => 5
+    t.string   "locale",                        :limit => 5,   :default => "en"
   end
 
   add_index "users", ["facebook_uid"], :name => "index_users_on_facebook_uid"
