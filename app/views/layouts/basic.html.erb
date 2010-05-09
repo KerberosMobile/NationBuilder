@@ -39,6 +39,7 @@
 	<% end %>	
 	
 	<div id="top_right_column">
+                <%= render :partial => 'shared/locale' %>
 		
 		<% if current_government.is_searchable? %>
 			<%= render :partial => "shared/search" %>

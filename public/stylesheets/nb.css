@@ -1315,3 +1315,11 @@ ul#priority_menu li.tab9 div.tab_body {
 	position: absolute;
 }
 /* end color picker */
+
+.locales a {
+  font-weight: bold;
+  font-size: 1.3em;
+  text-decoration: none;
+  margin-right: 5px; /* spacing links */
+  color: #000
+}
