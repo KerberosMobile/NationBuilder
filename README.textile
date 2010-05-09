@@ -1,3 +1,10 @@
+h1. Fork for Belgian experiment
+
+The main difference is that Belgium is multilingual.
+current maintainer: Elise Huard
+
+---
+
 NationBuilder is a radical and fun new way to run your country, state, city, neighborhood, corporation or non-profit completely democratically with thousands of people over the internet. 
 
 This project started as "White House 2":http://whitehouse2.org/, but it's now expanding into "NationBuilder":http://nationbuilder.com/ so anyone can use it to run a democracy.  You can also see it in action at "Parliament 2":http://parliament2.ca and "Australia 2":http://australia2.org.au/.
