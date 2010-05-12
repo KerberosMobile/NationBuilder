@@ -9,3 +9,4 @@ config/facebooker.yml
 config/s3.yml
 solr/index
 solr/*.pid
+config/initializers/tolk.rb
