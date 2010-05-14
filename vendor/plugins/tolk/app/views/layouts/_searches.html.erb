@@ -1,0 +1,16 @@
+<h3 class="search">
+  <% form_tag "/tolk/search", :method => :get do %>
+    <%= hidden_field_tag :locale, locale.name %>
+    Search for an English phrase:
+    <%= text_field_tag :q, params[:q] %>
+    <%= submit_tag "Search", :name => nil %>
+  <% end %>
+  <% form_tag "/tolk/search", :method => :get do %>
+    <%= hidden_field_tag :locale, locale.name %>
+    <%= hidden_field_tag :key, true %>
+    Search on translation key:
+    <%= text_field_tag :qkey, params[:qkey] %>
+    <%= submit_tag "Search", :name => nil %>
+  <% end %>
+</h3>
+

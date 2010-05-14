@@ -119,6 +119,15 @@ module Tolk
       phrases = phrases.scoped(:conditions => ['tolk_phrases.id IN(?)', translations.map(&:phrase_id).uniq])
       phrases.paginate({:page => page}.merge(options))
     end
+
+    def search_phrases_on_key(query, page = nil, options = {})
+      return [] unless query.present?
+
+      phrases = Tolk::Phrase.scoped(:conditions => ["tolk_phrases.key LIKE ?", "%#{query}%"],
+                                    :order => 'tolk_phrases.key ASC')
+
+      phrases.paginate({:page => page}.merge(options))
+    end
     
     def search_phrases_without_translation(query, page = nil, options = {})
       return phrases_without_translation(page, options) unless query.present?

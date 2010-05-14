@@ -7,14 +7,7 @@
   <span class="notice">Some phrases have changed. <%= link_to "Update translations", updated_tolk_locale_path(@locale) %>.</span>
 <% end %>
 
-<div class="search">
-  <% form_tag "/tolk/search", :method => :get do %>
-    <%= hidden_field_tag :locale, @locale.name %>
-    Search for an English phrase:
-    <%= text_field_tag :q, params[:q] %>
-    <%= submit_tag "Search", :name => nil %>
-  <% end %>
-</div>
+<%= render :partial => 'layouts/searches', :locals => { :locale => @locale } %>
 
 <div class="translations">
 <% if @phrases.any? %>

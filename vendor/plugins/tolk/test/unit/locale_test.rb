@@ -25,6 +25,11 @@ class LocaleTest < ActiveSupport::TestCase
     assert !tolk_locales(:en).search_phrases_without_translation("cozy").include?(tolk_phrases(:hello_world))
   end
 
+  test "searching phrases on key" do
+    assert tolk_locales(:en).search_phrases_on_key('hello_world').include?(tolk_phrases(:hello_world))
+    assert tolk_locales(:en).search_phrases_on_key('hello_world').include?(tolk_phrases(:nested_hello_world))
+  end
+
   test "paginating phrases without translations" do
     Tolk::Phrase.per_page = 2
     locale = tolk_locales(:se)

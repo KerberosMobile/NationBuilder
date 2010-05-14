@@ -3,7 +3,11 @@ module Tolk
     before_filter :find_locale
   
     def show
-      @phrases = @locale.search_phrases(params[:q], params[:page])
+      if params[:qkey]
+        @phrases = @locale.search_phrases_on_key(params[:qkey], params[:page])
+      else
+        @phrases = @locale.search_phrases(params[:q], params[:page])
+      end
     end
 
     private

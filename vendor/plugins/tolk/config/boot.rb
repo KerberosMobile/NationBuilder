@@ -68,6 +68,7 @@ module Rails
     class << self
       def rubygems_version
         Gem::RubyGemsVersion if defined? Gem::RubyGemsVersion
+        Gem::VERSION if defined? Gem::VERSION
       end
 
       def gem_version

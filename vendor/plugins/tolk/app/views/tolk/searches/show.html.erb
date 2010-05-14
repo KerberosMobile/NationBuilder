@@ -2,14 +2,7 @@
   <span class="locale"><%= @locale.language_name %></span>
 <% end %>
 
-<h3 class="search">
-  <% form_tag "/tolk/search", :method => :get do %>
-    <%= hidden_field_tag :locale, @locale.name %>
-    Search for an English phrase:
-    <%= text_field_tag :q, params[:q] %>
-    <%= submit_tag "Search", :name => nil %>
-  <% end %>
-</h3>
+<%= render :partial => 'layouts/searches', :locals => { :locale => @locale } %>
 
 <div class="search_exits">
   <%= link_to "Phrases missing translation", @locale %>
