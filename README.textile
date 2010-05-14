@@ -96,6 +96,18 @@ heroku rake facebook:register_templates
 heroku config:add TWITTER_SECRET_KEY='YOUR SECRET KEY'
 </code></pre>
 
+Note: heroku console action might be needed if government was already created:
+<pre><code>
+>> g.twitter_key='XXXXYYYYY'
+=> "XXXXYYYYY"
+>> g.twitter_secret_key='BBBBBBBBBCCCCCCCCC'
+=> "BBBBBBBBBCCCCCCCCC"
+>> g.has_twitter_enabled?
+=> true
+>> g.save
+</code></pre>
+
+
 For Yahoo mail and Windows Live contact importing, you set the API keys under Settings > Nation Settings > API Keys
 
 *To enable search*:
