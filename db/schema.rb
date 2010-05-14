@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100506191248) do
+ActiveRecord::Schema.define(:version => 20100514114604) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -648,7 +648,6 @@ ActiveRecord::Schema.define(:version => 20100506191248) do
     t.string   "name",              :limit => 60
     t.string   "short_name",        :limit => 20
     t.integer  "picture_id"
-    t.integer  "is_optin",          :limit => 2,  :default => 0,         :null => false
     t.string   "optin_text",        :limit => 60
     t.string   "privacy_url"
     t.datetime "created_at"
@@ -666,6 +665,7 @@ ActiveRecord::Schema.define(:version => 20100506191248) do
     t.string   "logo_content_type", :limit => 30
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.boolean  "is_optin",                        :default => false,     :null => false
   end
 
   add_index "partners", ["short_name"], :name => "short_name"
