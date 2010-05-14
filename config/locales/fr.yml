@@ -1,0 +1,265 @@
+--- 
+fr: 
+  24hr: "24 heures"
+  30days: "Dans les 30 derniers jours"
+  7days: "Dans les 7 derniers jours"
+  about: 
+    faq: "Réponses aux questions fréquemment posées à {{government_name}} "
+    index: "A propos de {{government_name}}"
+    privacy: "Politique de confidentialité de {{government_name}}"
+    rules: "Regles de {{government_name}}"
+  activerecord: 
+    errors: 
+      messages: 
+        accepted: "doit être accepté"
+        blank: "ne peut être vide"
+        confirmation: "ne correspond à la confirmation"
+        empty: "ne peut être vide"
+        equal_to: "doit être egal à {{count}}"
+        even: "doit être pair"
+        exclusion: "est réservé"
+        greater_than: "doit être plus grand que {{count}}"
+        greater_than_or_equal_to: "doite être plus grand ou égal à {{count}}"
+        inclusion: "n'est pas inclus dans la liste"
+        invalid: "est invalide"
+        less_than: "doit être plus petit que {{count}}"
+        less_than_or_equal_to: "doit être plus petit ou égal à {{count}}"
+        not_a_number: "n'est pas un nombre"
+        odd: "doit être impair"
+        record_invalid: "Erreur(s)  de validation: {{errors}}"
+        taken: "est déjà pris"
+        too_long: "est trop long (maximum {{count}} caractères)"
+        too_short: "est trop court (minimum {{count}} caractères)\n"
+        wrong_length: "doit contenir {{count}} caractères"
+      template: 
+        body: "Les champs suivants posent problème:"
+  activities: 
+    empty: "Aucune activité pour l'instant."
+  activity: 
+    bulletin: 
+      new: 
+        name: 
+          known: "{{user_name}} a ajouté un bulletin à {{discussion_name}} "
+          unknown: "{{user_name}} a publié un bulletin "
+        nouser: 
+          known: "Ajouté un bulletin à {{discussion_name}} "
+          unknown: "Publié un bulletin "
+      profile: 
+        new: 
+          name: "{{user_name}} a publié un bulletin sur le profil de {{other_user_name}}"
+          nouser: "Publié un bulletin sur le profil de {{other_user_name}}"
+    discussion: 
+      following: 
+        new: 
+          nouser: "Suit la discussion {{discussion_name}} "
+    endorsement: 
+      replaced: 
+        noself: "{{user_name}} préfère soutenir {{new_priority_name}}\n"
+        nouser: "Soutiens {{new_priority_name}} au lieu de {{priority_name}}\n"
+    following: 
+      delete: 
+        name: "{{user_name}} a arreté de suivre {{other_user_name}}\n"
+        nouser: "A arreté de suivre {{other_user_name}}"
+      new: 
+        name: "{{user_name}} suit {{other_user_name}}"
+    ignoring: 
+      delete: 
+        name: "{{user_nam}} n'ignore plus quelqu'un"
+      new: 
+        name: "{{user_nam}} ignore quelqu'un"
+    invitation: 
+      accepted: 
+        name: 
+          unknown: "{{user_name}} a accepté une invitation à rejoindre {{government_name}}"
+    partner: 
+      picture: 
+        new: 
+          name: "{{partner_name}} a un nouveau logo\n"
+    point: 
+      deleted: 
+        name: "{{user_name}} a effacé {{point_name}}\n"
+        nouser: "{{point_name}} effacé"
+    priority: 
+      comment: 
+        new: 
+          name: "{{user_name}} a laissé un commentaire concernant {{priority_name}}\n"
+          noself: "{{user_name}} a posté un commentaire\n"
+          nouser: "A laissé un commentaire concernant {{priority_name}}"
+      renamed: 
+        nouser: "'{{priority_name}}' renommé "
+  addthis: 
+    facebook: 
+      name: "Publier sur Facebook"
+    name: "Partager sur d'autres sites"
+  admin: 
+    fav_icon_explanation: "Le 'fav icon' est la petite icône de 16x16 dans la barre d'adresse de votre navigateur. Il devrait ressembler à ceci :"
+    impersonate: "Vous êtes connecté(e) en tant {{user_name}}"
+    logo: "Changer le logo de {{government_name}}"
+  ads: 
+    per_member: "par membre"
+    shown_to: "Montré à/sur"
+    your_message: "Votre message ici"
+  application: 
+    fb_session_expired: "Votre session Facebook a expiré"
+  branches: 
+    default: 
+      priorities: 
+        deleted: "La priorité a été effacée"
+        name: priorités
+        replaced: "Cette priorité a été remplacé par {{priority_name}}"
+    destroy: 
+      success: "'{{branch_name}}' effacé"
+    new: 
+      name: 
+        label: Nom
+  briefing: 
+    search: 
+      empty: "Pas de résultats"
+  bulletins: 
+    new: 
+      discussion: "Démarrer une discussion"
+      document: "Démarrer une discussion à propos de ce document"
+  cancel: Annuler
+  changes: 
+    approved: APPROUVÉ
+    insta_approve: 
+      name: "Approuver sans voter"
+  color_schemes: 
+    new: 
+      buttons: 
+        name: Boutons
+      font: 
+        name: Police
+      misc: 
+        errors: Erreurs
+        inactive: Inactif
+        name: Divers
+      page: 
+        background: Arrière-plan
+        comments: Commentaires
+        footer: "Bas de page"
+        headings: En-tête
+        links: Liens
+        name: Page
+        subheadings: "En-tête secondaire"
+      text: Texte
+      toolbar: 
+        color: Couleur
+        name: "Barre d'outils"
+  datetime: 
+    distance_in_words: 
+      half_a_minute: "demi minute"
+    prompts: 
+      day: Jour
+      hour: Heure
+      minute: Minute
+      month: Mois
+      second: Secondes
+      year: Année
+  document: 
+    destroy: 
+      error: "Seul le créateur du document peut l'effacer."
+    discussions: 
+      title: "Discussion concernant {{document_name}}"
+    edit: 
+      title: "Éditer {{document_name}}"
+    empty: "Aucun document."
+    name: documents
+    new: 
+      save: "{{document_name}} sauvegardé"
+      success: "Merci pour votre contribution concernant '{{document_name}}'"
+    newest: 
+      title: "Nouveaux documents"
+    revision: 
+      new: 
+        submit: "Enregistrer le document"
+    title: Documents
+    yours: 
+      title: "Vos documents"
+  doit: OUI
+  dont: NON
+  endorse: 
+    capitalize: Soutenir
+    ed: soutenu
+  endorsements: 
+    change: changer
+    delete: 
+      title: "Cliquer sur X pour enlever la priorité de votre liste"
+    priority1: "Priorité #1 :"
+  facebook: 
+    invite: 
+      connect: "Cliquez sur ce bouton pour vous connecter à Facebook et retrouver vos amis"
+      nomembers: "Aucun de vos amis Facebook n'est membre de {{government_name}}"
+      request: 
+        action: "Invitez vos amis Facebook à rejoindre votre réseau à {{government_name}}"
+        button: "Oui, je veux m'investir"
+      success: "{{number}} amis Facebook invités"
+  ignore: 
+    capitalize: Ignorer
+    delete: 
+      title: "Arrêter d'ignorer cette personne"
+    ing: Ignore
+    name: ignore
+  inbox: 
+    headers: 
+      from: "De :"
+      message: "Message :"
+      received: "Reçu :"
+      sent: "Envoyé :"
+  install: 
+    admin_user: 
+      submit: "Sauvegarder votre compte"
+  menu: 
+    about: 
+      faq: FAQ
+      name: "À propos"
+      rules: Règles
+      site: "À propos de ce site"
+    admin: 
+      apis: "Clés d'API"
+      colors: Couleurs
+      emails: E-mails
+      logo: Logo
+      pages: Pages
+    briefing: 
+      add_document: 
+        name: "Ajouter un document"
+      delete: 
+        confirm: "Voulez-vous vraiment effacer ceci ?"
+        name: Effacer
+      discussions: 
+        name: Discussion
+        one: "1 discussion"
+        other: "{{count}} discussions"
+      documents: 
+        name: Documents
+        one: "1 document"
+        other: "{{count}} documents"
+    inbox: 
+      sent: "Messages envoyés"
+    network: 
+      import: 
+        facebook: Facebook
+      name: Réseau
+      new: "Nouveaux membres"
+      partners: Partenaires
+      yours: "Votre réseau"
+    news: 
+      discussions: Discussions
+  new: nouveau
+  users: 
+    suspended: "{{user_name}} est bloqué"
+  votes: 
+    new: 
+      approve: 
+        endorser: "OUI, je soutiens"
+        opposer: "OUI, je m'oppose"
+      decline: 
+        endorser: "NON, je continue à soutenir"
+        opposer: "NON, je continue à m'opposer"
+      success: Voté
+    show: 
+      approved: "Vous avez voté oui."
+  widgets: 
+    index: 
+      title: "Widgets pour votre blog ou site web"
