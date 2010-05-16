@@ -1,0 +1,56 @@
+--- 
+nl: 
+  24hr: "24 uur"
+  30days: "Laatste 30 dagen"
+  7days: "Laatste 7 dagen"
+  about: 
+    faq: "Antwoorden voor de Veelgestelde Vragen (F.A.Q.) van {{government_name}} "
+    index: "Over {{government_name}}"
+  activerecord: 
+    errors: 
+      messages: 
+        blank: "mag niet leeg zijn"
+        empty: "mag niet leeg zijn"
+        equal_to: "moet gelijk zijn aan {{count}}"
+        even: "moet even zijn"
+        exclusion: "is voorbehouden"
+        greater_than: "moet groter zijn dan {{count}}"
+        greater_than_or_equal_to: "moet groter zijn dan of gelijk aan {{count}}"
+        invalid: "is ongeldig"
+        less_than: "moet kleiner zijn dan {{count}}"
+        less_than_or_equal_to: "moet kleiner zijn dan of gelijk aan {{count}}"
+        not_a_number: "is geen getal"
+        odd: "moet oneven zijn"
+        record_invalid: "Validatie mislukt: {{errors}}"
+        taken: "is reeds ingenomen"
+        too_long: "is te lang (het maximum is {{count}} tekens)"
+        too_short: "is te kort (het minimum is {{count}} tekens)"
+        wrong_length: "heeft een ongeldige lengte (moet {{count}} tekens zijn)"
+      template: 
+        body: "Er zijn problemen met de volgende velden:"
+  activities: 
+    empty: "Er is hier nog geen activiteit."
+  activity: 
+    bulletin: 
+      new: 
+        name: 
+          known: "{{user_name}} plaatste een bericht bij {{discussion_name}}"
+          unknown: "{{user_name}} plaatste een bericht"
+        nouser: 
+          known: "Plaatste een bericht bij {{discussion_name}}"
+          unknown: "Plaatste een bericht"
+      profile: 
+        new: 
+          name: "{{user_name}} plaatste een bericht op het profiel van {{other_user_name}}"
+          nouser: "Plaatste een bericht op het profiel van {{other_user_name}}"
+  bulletins: 
+    new: 
+      profile: "Plaats een bericht op het profiel van {{user_name}}"
+      submit: "Plaats een bericht"
+  notification: 
+    profile: 
+      bulletin: 
+        name: "{{sender_name}} plaatste een bericht op je profiel"
+        with_link: "{{sender_name}} plaatste een <a href='{{bulletin_url}}'>bericht</a> op je profiel"
+  unsubscribe: 
+    messages: "Persoonlijke boodschappen en profielberichten"
