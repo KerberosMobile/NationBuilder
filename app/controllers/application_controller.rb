@@ -233,7 +233,7 @@ class ApplicationController < ActionController::Base
     default_locale = 'en'
     locale = params[:locale] if params[:locale]
     user_locale = current_user.locale if current_user
-    @locale = locale || user_locale || session[:locale] || default_locale
+    @locale = locale || session[:locale] || user_locale || default_locale
     session[:locale] = @locale
     begin
       I18n.locale = @locale
