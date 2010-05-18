@@ -71,9 +71,9 @@ heroku config:add S3_SECRET='YOUR SECRET ACCESS KEY'
 heroku config:add S3_BUCKET='BUCKET IDENTIFIER'
 </code></pre>
 
-NationBuilder makes extensive use of the DelayedJob plugin, which costs $15/mo from heroku.  You can still get up and running and play around without installing DelayedJob, but the rankings will never update and a few features will not work.  To install DelayedJob just do this:
+NationBuilder makes extensive use of the DelayedJob plugin, which costs 0.05$/hour on heroku for one job queue.  You can still get up and running and play around without installing DelayedJob, but the rankings will never update and a few features will not work.  To install DelayedJob just do this:
 
-<pre><code>heroku addons:add dj
+<pre><code>heroku workers 1
 heroku rake jobs:enqueue
 </code></pre>
 
