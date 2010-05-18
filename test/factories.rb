@@ -13,6 +13,7 @@ Factory.define :user do |u|
   u.email { Factory.next(:email) }
   u.password 'toodeloo'
   u.password_confirmation 'toodeloo'
+  u.capitals_count 9999999
   u.locale 'en'
 end
 
@@ -26,4 +27,23 @@ Factory.define :government do |g|
   g.briefing_name 'euhm'
   g.currency_name 'linden dollars'
   g.currency_short_name 'ldd' 
+end
+
+Factory.sequence :priority_name do |n|
+  "Change the world #{n}"
+end
+
+Factory.define :priority do |p|
+  p.name { Factory.next(:priority_name) }
+end
+
+Factory.define :change do |c|
+  c.association :priority
+  c.new_priority { Factory(:priority) }
+  c.association :user
+end
+
+Factory.define :vote do |v|
+  v.association :change
+  v.association :user
 end

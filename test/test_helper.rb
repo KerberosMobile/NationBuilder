@@ -41,13 +41,23 @@ require 'factory_girl'
 require 'factories'
 require 'mocha'
 
-class ActiveSupport::TestCase
-  def setup
-    current_government
-  end
-
+module CurrentGov
   def current_government
     @gov ||= Factory(:government)
     Government.stubs(:current).returns(@gov)
   end
+end
+
+class ActiveSupport::TestCase
+
+  include CurrentGov
+  setup :current_government
+
+end
+
+class ActionController::TestCase
+
+  include CurrentGov
+  setup :current_government
+
 end
