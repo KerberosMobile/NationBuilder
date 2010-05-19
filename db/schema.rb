@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100514114604) do
+ActiveRecord::Schema.define(:version => 20100519113709) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -731,7 +731,7 @@ ActiveRecord::Schema.define(:version => 20100514114604) do
   add_index "points", ["user_id"], :name => "index_points_on_user_id"
 
   create_table "priorities", :force => true do |t|
-    t.integer  "position",                               :default => 0,     :null => false
+    t.integer  "position",                               :default => 0
     t.integer  "user_id"
     t.string   "name",                    :limit => 140
     t.integer  "endorsements_count",                     :default => 0,     :null => false
