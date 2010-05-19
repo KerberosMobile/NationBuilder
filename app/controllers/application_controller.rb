@@ -13,6 +13,8 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActionController::InvalidAuthenticityToken, :with => :bad_token
   rescue_from Facebooker::Session::SessionExpired, :with => :fb_session_expired 
+  # Catch ActiveRecord::RecordNotFound as a sensible default
+  rescue_from ActiveRecord::RecordNotFound, :with => :rescue_not_found
 
   helper :all # include all helpers, all the time
   
@@ -227,6 +229,11 @@ class ApplicationController < ActionController::Base
       format.html { redirect_to request.referrer||'/' }
       format.js { redirect_from_facebox(request.referrer||'/') }
     end    
+  end
+
+  def rescue_not_found(e)
+    flash[:error] = e.message
+    redirect_to root_url
   end
 
   def set_locale
