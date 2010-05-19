@@ -6,16 +6,23 @@ nl:
   about: 
     faq: "Antwoorden voor de Veelgestelde Vragen (F.A.Q.) van {{government_name}} "
     index: "Over {{government_name}}"
+    privacy: "{{government_name}} Privacy Policy"
+    rules: "{{government_name}} Reglement"
   activerecord: 
     errors: 
+      full_messages: 
+        format: "{{attribute}} {{message}}"
       messages: 
+        accepted: "moet aanvaard worden"
         blank: "mag niet leeg zijn"
+        confirmation: "komt niet overeen met de bevestiging"
         empty: "mag niet leeg zijn"
         equal_to: "moet gelijk zijn aan {{count}}"
         even: "moet even zijn"
         exclusion: "is voorbehouden"
         greater_than: "moet groter zijn dan {{count}}"
         greater_than_or_equal_to: "moet groter zijn dan of gelijk aan {{count}}"
+        inclusion: "is niet opgenomen in de lijst"
         invalid: "is ongeldig"
         less_than: "moet kleiner zijn dan {{count}}"
         less_than_or_equal_to: "moet kleiner zijn dan of gelijk aan {{count}}"
@@ -28,8 +35,11 @@ nl:
         wrong_length: "heeft een ongeldige lengte (moet {{count}} tekens zijn)"
       template: 
         body: "Er zijn problemen met de volgende velden:"
+        header: 
+          one: "dit {{model}} kon niet worden bewaard omwille van een fout"
+          other: "dit {{model}} kon niet worden bewaard omwille van {{count}} fouten"
   activities: 
-    empty: "Er is hier nog geen activiteit."
+    empty: "Hier is nog geen activiteit."
   activity: 
     bulletin: 
       new: 
@@ -43,14 +53,417 @@ nl:
         new: 
           name: "{{user_name}} plaatste een bericht op het profiel van {{other_user_name}}"
           nouser: "Plaatste een bericht op het profiel van {{other_user_name}}"
+    capital: 
+      acquisition: 
+        proposal: 
+          approved: 
+            name: "{{user_name}} verdiende {{capital}}{{currency_short_name}} omdat {{priority_name}} in {{new_priority_name}} opgenomen werd"
+            nouser: "Verdiende {{capital}}{{currency_short_name}} omdat {{priority_name}} in {{new_priority_name}} opgenomen werd"
+          deleted: 
+            name: "{{user_name}} kreeg {{capital}}{{currency_short_name}} terug omdat er geen stemming plaatsvond over het opnemen van {{priority_name}} in {{new_prioritiy_name}}"
+            nouser: "Kreeg {{capital}}{{currency_short_name}} terug omdat er geen stemming plaatsvond over het opnemen van {{priority_name}} in {{new_prioritiy_name}}"
+          new: 
+            link: "{{user_name}} besteedde {{capital}}{{currency_short_name}} aan een <a href='{{proposal_url}}'>voorstel</a> om {{priority_name}} op te nemen in {{new_priority_name}}"
+            name: "{{user_name}} besteedde {{capital}}{{currency_short_name}} aan een voorstel om {{priority_name}} op te nemen in {{new_priority_name}}"
+            noself: "{{user_name}} besteedde {{capital}}{{currency_short_name}} aan een <a href='{{proposal_url}}'>voorstel</a> om deze prioriteit op te nemen in {{new_priority_name}}"
+            nouser: "Besteedde {{capital}}{{currency_short_name}} aan een <a href='{{proposal_url}}'>voorstel</a> om {{priority_name}} op te nemen in {{new_priority_name}}"
+      ad: 
+        new: 
+          link: "{{user_name}} besteedde {{capital}}{{currency_short_name}} aan een <a href='{{ad_url}}'>advertentie</a> voor {{priority_name}}"
+          name: "{{user_name}} besteedde {{capital}}{{currency_short_name}} aan een advertentie voor {{priority_name}}"
+          noself: "{{user_name}} besteedde {{capital}}{{currency_short_name}} aan een <a href='{{ad_url}}'>advertentie</a> voor deze prioriteit"
+          nouser: "Besteedde {{capital}}{{currency_short_name}} aan een <a href='{{ad_url}}'>advertentie</a> voor {{priority_name}}"
+      followers: 
+        earned: 
+          name: 
+            one: "{{user_name}} verdiende {{count}}{{currency_short_name}} voor 1 nieuwe volger"
+            other: "{{user_name}} verdiende {{count}}{{currency_short_name}} voor {{count}} nieuwe volgers"
+          nouser: 
+            one: "Verdiende {{count}}{{currency_short_name}} voor 1 nieuwe volger"
+            other: "Verdiende {{count}}{{currency_short_name}} voor {{count}} nieuwe volgers"
+        lost: 
+          name: 
+            one: "{{user_name}} verloor {{count}}{{currency_short_name}} door 1 verloren volger"
+            other: "{{user_name}} verloor {{count}}{{currency_short_name}} door {{count}} verloren volgers"
+          nouser: 
+            one: "Verloor {{count}}{{currency_short_name}} door 1 verloren volger"
+            other: "Verloor {{count}}{{currency_short_name}} door {{count}} verloren volgers"
+      government: 
+        new: 
+          name: "{{user_name}} verdiende {{capital}}{{currency_short_name}} voor het oprichten van deze natie"
+          nouser: "Verdiende {{capital}}{{currency_short_name}} voor het oprichten van deze natie"
+      ignorers: 
+        earned: 
+          name: 
+            one: "{{user_name}} verdiende {{count}}{{currency_short_name}} omdat iemand hem/haar niet langer negeert"
+            other: "{{user_name}} verdiende {{count}}{{currency_short_name}} omdat {{count}} personen hem/haar niet langer negeren"
+          nouser: 
+            one: "Verdiende {{count}}{{currency_short_name}} omdat iemand hem/haar niet langer negeert"
+            other: "Verdiende {{count}}{{currency_short_name}} omdat {{count}} personen hem/haar niet langer negeren"
+        lost: 
+          name: 
+            one: "{{user_name}} verloor {{count}}{{currency_short_name}} omdat iemand hem/haar negeert"
+            other: "{{user_name}} verloor {{count}}{{currency_short_name}} omdat {{count}} personen hem/haar negeren"
+          nouser: 
+            one: "Verloor {{count}}{{currency_short_name}} omdat iemand hem/haar negeert"
+            other: "Verloor {{count}}{{currency_short_name}} omdat {{count}} personen hem/haar negeren"
+      inactive: 
+        name: "{{user_name}} verloor {{capital}}{{currency_short_name}} omdat hij/zij zich niet recent meer aanmeldde"
+        nouser: "Verloor {{capital}}{{currency_short_name}} omdat hij/zij zich niet recent meer aanmeldde"
+      legislators: 
+        added: 
+          name: "{{user_name}} verdiende {{capital}}{{currency_short_name}} door het toevoegen van wetgevers aan zijn/haar account"
+          nouser: "Verdiende {{capital}}{{currency_short_name}} door het toevoegen van wetgevers aan zijn/haar account"
+      obama_letter: 
+        name: "{{user_name}} verdiende {{capital}}{{currency_short_name}} door het versturen van zijn/haar agenda aan {{official_user_name}}"
+        nouser: "Verdiende {{capital}}{{currency_short_name}} door het versturen van zijn/haar agenda aan {{official_user_name}}"
+      partner: 
+        user: 
+          recruited: 
+            name: "{{user_name}} verdiende {{capital}}{{currency_short_name}} voor het recruteren van {{other_user_name}} bij {{government_name}} via {{partner_url}}"
+            nouser: "Verdiende {{capital}}{{currency_short_name}} voor het recruteren van {{other_user_name}} bij {{government_name}} via {{partner_url}}"
+      point: 
+        helpful: 
+          deleted: 
+            name: "{{user_name}} verloor {{capital}}{{currency_short_name}} voor het verwijderen van {{point_name}} omdat anderen het nuttig vonden"
+            nouser: "Verloor {{capital}}{{currency_short_name}} voor het verwijderen van {{point_name}} omdat anderen het nuttig vonden"
+          endorsers: 
+            name: "{{user_name}} verdiende {{capital}}{{currency_short_name}} omdat medestanders {{point_name}} nuttig vonden"
+            nouser: "Verdiende {{capital}}{{currency_short_name}} omdat medestanders {{point_name}} nuttig vonden"
+          everyone: 
+            name: "{{user_name}} verdiende {{capital}}{{currency_short_name}} omdat zowel medestanders als tegenstanders {{point_name}} nuttig vonden"
+            nouser: "Verdiende {{capital}}{{currency_short_name}} omdat zowel medestanders als tegenstanders {{point_name}} nuttig vonden"
+          opposers: 
+            name: "{{user_name}} verdiende {{capital}}{{currency_short_name}} omdat tegenstanders {{point_name}} nuttig vonden"
+            nouser: "Verdiende {{capital}}{{currency_short_name}} omdat tegenstanders {{point_name}} nuttig vonden"
+          undeclareds: 
+            name: "{{user_name}} verdiende {{capital}}{{currency_short_name}} omdat onbeslisten {{point_name}} nuttig vonden"
+            nouser: "Verdiende {{capital}}{{currency_short_name}} omdat onbeslisten {{point_name}} nuttig vonden"
+        unhelpful: 
+          endorsers: 
+            name: "{{user_name}} verloor {{capital}}{{currency_short_name}} omdat medestanders {{point_name}} niet nuttig vonden"
+            nouser: "Verloor {{capital}}{{currency_short_name}} omdat medestanders {{point_name}} niet nuttig vonden"
+          everyone: 
+            name: "{{user_name}} verloor {{capital}}{{currency_short_name}} omdat zowel medestanders als tegenstanders {{point_name}} niet nuttig vonden"
+            nouser: "Verloor {{capital}}{{currency_short_name}} omdat zowel medestanders als tegenstanders {{point_name}} niet nuttig vonden"
+          opposers: 
+            name: "{{user_name}} verloor {{capital}}{{currency_short_name}} omdat tegenstanders {{point_name}} niet nuttig vonden"
+            nouser: "Verloor {{capital}}{{currency_short_name}} omdat tegenstanders {{point_name}} niet nuttig vonden"
+          undeclareds: 
+            name: "{{user_name}} verloor {{capital}}{{currency_short_name}} omdat onbeslisten {{point_name}} niet nuttig vonden"
+            nouser: "Verloor {{capital}}{{currency_short_name}} omdat onbeslisten {{point_name}} niet nuttig vonden"
+      twitter: 
+        followers: 
+          earned: 
+            link: 
+              one: "{{user_name}} verdiende {{count}}{{currency_short_name}} voor 1 nieuwe volger op <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+              other: "{{user_name}} verdiende {{count}}{{currency_short_name}} voor {{count}} nieuwe volgers op <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+            name: 
+              one: "{{user_name}} verdiende {{count}}{{currency_short_name}} voor 1 nieuwe volger op Twitter"
+              other: "{{user_name}} verdiende {{count}}{{currency_short_name}} voor {{count}} nieuwe volgers op Twitter"
+            nouser: 
+              one: "Verdiende {{count}}{{currency_short_name}} voor 1 nieuwe volger op <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+              other: "Verdiende {{count}}{{currency_short_name}} voor {{count}} nieuwe volgers op <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+          lost: 
+            link: 
+              one: "{{user_name}} verloor {{count}}{{currency_short_name}} omwille van 1 verloren volger op <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+              other: "{{user_name}} verloor {{count}}{{currency_short_name}} omwille van {{count}} verloren volgers op <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+            name: 
+              one: "{{user_name}} verloor {{count}}{{currency_short_name}} omwille van 1 verloren volger op Twitter"
+              other: "{{user_name}} verloor {{count}}{{currency_short_name}} omwille van {{count}} verloren volgers op Twitter"
+            nouser: 
+              one: "Verloor {{count}}{{currency_short_name}} omwille van 1 verloren volger op <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+              other: "Verloor {{count}}{{currency_short_name}} omwille van {{count}} verloren volgers op <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+      user: 
+        recruited: 
+          name: "{{user_name}} verdiende {{capital}}{{currency_shory_name}} voor het recruteren van {{other_user_name}} bij {{government_name}}"
+          nouser: "Verdiende {{capital}}{{currency_shory_name}} voor het recruteren van {{other_user_name}} bij {{government_name}}"
+      warning: 
+        link: "{{user_name}} verloor {{capital}}{{currency_short_name}} voor het schenden van het <a href='/about/rules'>reglement</a>"
+        name: "{{user_name}} verloor {{capital}}{{currency_short_name}} voor het schenden van het reglement"
+        nouser: "Verloor {{capital}}{{currency_short_name}} voor het schenden van het reglement"
+    comment: 
+      participant: 
+        name: 
+          one: "{{user_name}} reageerde op {{discussion_name}}"
+          other: "{{user_name}} reageerde {{count}} keer op {{discussion_name}}"
+        nouser: 
+          one: "Reageerde op {{discussion_name}}"
+          other: "Reageerde {{count}} keer op {{discussion_name}}"
+    discussion: 
+      following: 
+        delete: 
+          name: "{{user_name}} volgt het debat {{discussion_name}} niet langer"
+          nouser: "Gestopt met het volgen van de discussie over {{discussion_name}} "
+        new: 
+          name: "{{user_name}} volgt nu de discussie over {{discussion_name}} "
+          nouser: "Volgt de discussie over {{discussion_name}} "
+    endorsement: 
+      delete: 
+        name: "{{user_name}} steunt {{priority_name}} niet langer"
+        noself: "{{user_name}} steunt niet langer"
+        nouser: "Steunt {{priority_name}} niet langer"
+      flipped: 
+        implicit: 
+          name: "{{user_name}} steunt nu {{new_priority_name}} omdat het de tegenstanders van {{priority_name}} opgenomen heeft"
+          nouser: "Steunt nu {{new_priority_name}} omdat het de tegenstanders van {{priority_name}} opgenomen heeft"
+        name: "{{user_name}} steunt nu {{new_priority_name}} in plaats van tegen {{priority_name}} te zijn"
+        nouser: "Steunt nu {{new_priority_name}} in plaats van tegen {{priority_name}} te zijn"
+      new: 
+        ad: 
+          link: 
+            known: "{{user_name}} steunt {{priority_name}} op plaats #{{position}} door een <a href='{{ad_url}}'>advertentie van {{ad_user}}</a>"
+            unknown: "{{user_name}} steunt {{priority_name}} door een <a href='{{ad_url}}'>advertentie van {{ad_user}}</a>"
+          name: 
+            known: "{{user_name}} ondersteunt {{priority_name}} als prioriteit #{{position}}  door de advertentie van {{ad_user}}"
+            unknown: "{{user_name}} steunt {{priority_name}} door een advertentie van {{ad_user}}"
+          noself: 
+            known: "{{user_name}} steunt op plaats #{{position}} door een <a href='{{ad_url}}'>advertentie van {{ad_user}}</a>"
+            unknown: "{{user_name}} steunt door een <a href='{{ad_url}}'>advertentie van {{ad_user}}</a>"
+          nouser: 
+            known: "Steunt {{priority_name}} op plaats #{{position}} door een <a href='{{ad_url}}'>advertentie van {{ad_user}}</a>"
+            unknown: "Steunt {{priority_name}} door een <a href='{{ad_url}}'>advertentie van {{ad_user}}</a>"
+        name: 
+          known: "{{user_name}} steunt {{priority_name}} op plaats #{{position}}"
+          unknown: "{{user_name}} steunt {{priority_name}}"
+        noself: 
+          known: "{{user_name}} steunt op plaats #{{position}}"
+          unknown: "{{user_name}} steunt"
+        nouser: 
+          known: "Steunt {{priority_name}} op plaats #{{position}}"
+          unknown: "Steunt {{priority_name}}"
+      replaced: 
+        implicit: 
+          name: "{{user_name}} steunt nu {{new_priority_name}} omdat {{priority_name}} opgenomen werd"
+          nouser: "Steunt nu {{new_priority_name}} omdat {{priority_name}} opgenomen werd"
+        name: "{{user_name}} steunt nu {{new_priority_name}} in plaats van {{priority_name}}"
+        noself: "{{user_name}} steunt nu {{new_priority_name}}"
+        nouser: "Steunt nu {{new_priority_name}} in plaats van {{priority_name}}"
+    following: 
+      delete: 
+        name: "{{user_name}} volgt {{other_user_name}} niet langer"
+        nouser: "Volgt {{other_user_name}} niet langer"
+      new: 
+        name: "{{user_name}} volgt nu {{other_user_name}}"
+        nouser: "Volgt nu {{other_user_name}}"
+    ignoring: 
+      delete: 
+        name: "{{user_name}} is gestopt met iemand negeren"
+      new: 
+        name: "{{user_name}} negeert iemand"
+    invitation: 
+      accepted: 
+        name: 
+          known: "{{user_name}} aanvaardde een uitnodiging van {{other_user_name}} om {{government_name}} te vervoegen"
+          unknown: "{{user_name}} aanvaardde een uitnodiging om {{government_name}} te vervoegen"
+        nouser: 
+          known: "Aanvaardde een uitnodiging van {{other_user_name}} om {{government_name}} te vervoegen"
+          unknown: "Aanvaardde een uitnodiging om {{government_name}} te vervoegen"
+      new: 
+        name: 
+          known: "{{user_name}} nodigde iemand uit"
+          unknown: "Iemand stuurde een uitnodiging"
+        nouser: "Nodigde iemand uit"
+    opposition: 
+      delete: 
+        name: "{{user_name}} is niet langer tegen {{priority_name}}"
+        noself: "{{user_name}} is niet langer tegen"
+        nouser: "Niet langer tegen {{priority_name}}"
+      flipped: 
+        implicit: 
+          name: "{{user_name}} is nu tegen {{new_priority_name}} omdat het de tegenstanders van {{priority_name}} opgenomen heeft"
+          nouser: "Is nu tegen {{new_priority_name}} omdat het de tegenstanders van {{priority_name}} opgenomen heeft"
+        name: "{{user_name}} is tegen {{new_priority_name}} in plaats van {{priority_name}}"
+        nouser: "Tegen {{new_priority_name}} in plaats van {{priority_name}}"
+      new: 
+        ad: 
+          link: 
+            known: "{{user_name}} is tegen {{priority_name}} op plaats #{{position}} door een <a href='{{ad_url}}'>advertentie van {{ad_user}}</a>"
+            unknown: "{{user_name}} is tegen {{priority_name}} door een <a href='{{ad_url}}'>advertentie van {{ad_user}}</a>"
+          name: 
+            known: "{{user_name}} is tegen {{priority_name}} op plaats #{{position}} door een advertentie van {{ad_user}}"
+            unknown: "{{user_name}} is tegen {{priority_name}} advertentie van {{ad_user}}"
+          noself: 
+            known: "{{user_name}} is tegen op plaats #{{position}} door een <a href='{{ad_url}}'>advertentie van {{ad_user}}</a>"
+            unknown: "{{user_name}} is tegen door een <a href='{{ad_url}}'>advertentie van {{ad_user}}</a>"
+          nouser: 
+            known: "Is tegen {{priority_name}} op plaats #{{position}} door een <a href='{{ad_url}}'>advertentie van {{ad_user}}</a>"
+            unknown: "Is tegen {{priority_name}} door een <a href='{{ad_url}}'>advertentie van {{ad_user}}</a>"
+        name: 
+          known: "{{user_name}} is tegen {{priority_name}} op plaats #{{position}}"
+          unknown: "{{user_name}} is tegen {{priority_name}}"
+        noself: 
+          known: "{{user_name}} is tegen op plaats #{{position}}"
+          unknown: "{{user_name}} is tegen"
+        nouser: 
+          known: "Is tegen {{priority_name}} op plaats #{{position}}"
+          unknown: "Is tegen {{priority_name}}"
+      replaced: 
+        implicit: 
+          name: "{{user_name}} is nu tegen {{new_priority_name}} omdat {{priority_name}} opgenomen werd"
+          nouser: "Nu tegen {{new_priority_name}} omdat {{priority_name}} opgenomen werd"
+        name: "{{user_name}} is tegen {{new_priority_name}} in plaats van {{priority_name}}"
+        noself: "{{user_name}} is tegen {{new_priority_name}}"
+        nouser: "Is tegen {{new_priority_name}} in plaats van {{priority_name}}"
+    partner: 
+      new: 
+        name: "{{partner_name}} is een nieuwe partner"
+      picture: 
+        new: 
+          name: "{{partner_name}} heeft een nieuw logo"
+    point: 
+      deleted: 
+        name: "{{user_name}} verwijderde {{point_name}}"
+        nouser: "Verwijderde {{point_name}}"
+      helpful: 
+        delete: 
+          name: "{{user_name}} vindt {{point_name}} niet langer nuttig"
+          nouser: "Vindt {{point_name}} niet langer nuttig"
+        name: "{{user_name}} markeerde {{point_name}} als nuttig"
+        nouser: "Markeerde {{point_name}} als nuttig"
+      new: 
+        name: "{{user_name}} voegde {{point_name}} toe aan {{priority_name}}"
+        noself: "Voegde {{point_name}} toe aan deze prioriteit"
+        nouser: "Voegde {{point_name}} toe aan {{priority_name}}"
+      revision: 
+        content: 
+          name: "{{user_name}} herzag {{point_name}}"
+          nouser: "Herzag {{point_name}}"
+        link: 
+          deleted: 
+            name: "{{user_name}} verwijderde de prioriteitskoppeling van {{point_name}}"
+            nouser: "Verwijderde de prioriteitskoppeling van {{point_name}}"
+          new: 
+            name: "{{user_name}} koppelde {{point_name}} met {{priority_name}}"
+            nouser: "Koppelde {{point_name}} met {{priority_name}}"
+        name: "{{user_name}} wijzigde de titel van het standpunt in {{point_name}}"
+        neutral: 
+          name: "{{user_name}} herzag {{point_name}} om aan te geven dat het neutraal staat tegenover {{priority_name}}"
+          nouser: "Herzag {{point_name}} om aan te geven dat het neutraal staat tegenover {{priority_name}}"
+        nouser: "Wijzigde de titel van het standpunt in {{point_name}}"
+        opposition: 
+          name: "{{user_name}} herzag {{point_name}} om aan te geven dat het tegen {{priority_name}} is"
+          nouser: "Herzag {{point_name}} om aan te geven dat het tegen {{priority_name}} is"
+        supportive: 
+          name: "{{user_name}} herzag {{point_name}} om aan te geven dat het {{priority_name}} steunt"
+          nouser: "Herzag {{point_name}} om aan te geven dat het {{priority_name}} steunt"
+        website: 
+          deleted: 
+            name: "{{user_name}} verwijderde de bron link van {{point_name}}"
+            nouser: "Verwijderde de bron link van {{point_name}}"
+          new: 
+            name: "{{user_name}} herzag de bron link {{point_name}}"
+            nouser: "Herzag de bron link van {{point_name}}"
+      unhelpful: 
+        delete: 
+          name: "{{user_name}} vindt {{point_name}} niet langer niet nuttig"
+          nouser: "Vindt {{point_name}} niet langer niet nuttig"
+        name: "{{user_name}} markeerde {{point_name}} als niet nuttig"
+        nouser: "Markeerde {{point_name}} als niet nuttig"
+    priority: 
+      acquisition: 
+        proposal: 
+          approved: 
+            name: "{{new_priority_name}} nam {{priority_name}} op"
+          declined: 
+            name: "{{new_priority_name}} kon {{priority_name}} niet opnemen"
+          deleted: 
+            name: "{{user_name}} besliste om geen stemming te houden om {{priority_name}} op te nemen in {{new_priority_name}}"
+            nouser: "Besliste om geen stemming te houden om {{priority_name}} op te nemen in {{new_priority_name}}"
+          link: "{{user_name}} stelde voor om {{priority_name}} <a href='{{proposal_url}}'>op te nemen</a> in {{new_priority_name}}"
+          name: "{{user_name}} stelde voor om {{priority_name}} op te nemen in {{new_priority_name}}"
+          nouser: "Stelde voor om {{priority_name}} <a href='{{proposal_url}}'>op te nemen</a> in {{new_priority_name}}"
+          novote: 
+            name: "Stelde voor om {{priority_name}} op te nemen in {{new_priority_name}}"
+            nouser: "Stemde tegen het opnemen van {{priority_name}} in {{new_priority_name}}"
+      comment: 
+        new: 
+          name: "{{user_name}} schreef een reactie op {{priority_name}}"
+          noself: "{{user_name}} schreef een reactie"
+          nouser: "Schreef een reactie op {{priority_name}}"
   bulletins: 
     new: 
       profile: "Plaats een bericht op het profiel van {{user_name}}"
       submit: "Plaats een bericht"
+  document: 
+    no_revisions: "Geen enkel document werd recent herzien"
+    revised: 
+      title: "Recent herziene documenten"
+    revision: 
+      new: 
+        intro: 
+          endorse: "Dit document mag enkel herzien worden door personen die {{priority_name}} steunen. Documenten vormen immers een samenwerking tussen personen met eenzelfde standpunt. Dus, als u tegen bent, gelieve dan <a href='{{new_document_url}}'>een nieuw document te starten</a> om uit te weiden over uw ideeën."
+          oppose: "Dit document mag enkel herzien worden door personen die tegen {{priority_name}}. Documenten vormen immers een samenwerking tussen personen met eenzelfde standpunt. Dus, als u voor bent, gelieve dan <a href='{{new_document_url}}'>een nieuw document te starten</a> om uit te weiden over uw ideeën."
+      show: 
+        title: "{{document_name}} - herzien door {{use_name}}"
+  menu: 
+    about: 
+      faq: Vragen
+      name: "Over ons"
+      rules: Afspraken
+      site: "Over deze site"
+    briefing: 
+      add_document: 
+        name: "Voeg een document toe"
+        title: "Documenten maken het mogelijk om uit te wijden over je ideeën en er met anderen aan te werken"
+      all: Alle
+      all_activity: "Alle activiteit"
+      all_documents: "Alle documenten"
+      delete: 
+        confirm: "Ben je zeker dat je dit wil verwijderen?"
+        name: Verwijder
+      discussions: 
+        name: Gesprekken
+        one: "1 gesprek"
+        other: "{{count}} gesprekken"
+      documents: 
+        name: Documenten
+        one: "1 document"
+        other: "{{count}} documenten"
+      edit: Bewerk
+      full_text: "Volledige tekst"
+      helpful_to: "Nuttig voor:"
+      points: 
+        name: Standpunten
+        one: "1 standpunt"
+        other: "{{count}} standpunten"
+      priorities: 
+        name: Prioriteiten
+        one: "1 prioriteit"
+        other: "{{count}} prioriteiten"
+      recently_revised: "Recent herzien"
+      research: 
+        contributors: 
+          name: Mederwerkers
+          one: "Ontmoet de ene medewerker"
+          other: "Ontmoet de {{count}} mederwerkers"
+        documents_needed: "Prioriteiten die nog documenten nodig hebben"
+        name: "Voeg informatie toe"
+        needed: "Prioriteiten die nog {{points_name}} of {{documents_name}} nodig hebben"
+        points_needed: "Prioriteiten die nog standpunten nodig hebben"
+      revised: Herzien
+      revisions: 
+        name: herzieningen
+        one: "1 herziening"
+        other: "{{count}} herzieningen"
+      your_priorities: "Jouw prioriteiten"
+      yours: "Van jou"
   notification: 
+    document: 
+      revision: 
+        name: "{{sender_name}} herzag {{document_name}}"
+    point: 
+      revision: 
+        name: "{{sender_name}} herzag {{point_name}}"
     profile: 
       bulletin: 
         name: "{{sender_name}} plaatste een bericht op je profiel"
         with_link: "{{sender_name}} plaatste een <a href='{{bulletin_url}}'>bericht</a> op je profiel"
+  points: 
+    revised: 
+      empty: "Geen enkel standpunt werd recent herzien"
+      title: "Recent herziene standpunten"
+  revisions: 
+    revised: "herzien {{time_ago}}"
   unsubscribe: 
     messages: "Persoonlijke boodschappen en profielberichten"
