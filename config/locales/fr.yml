@@ -5,28 +5,30 @@ fr:
   7days: "Dans les 7 derniers jours"
   about: 
     faq: "Réponses aux questions fréquemment posées à {{government_name}} "
-    index: "A propos de {{government_name}}"
+    index: "À propos de {{government_name}}"
     privacy: "Politique de confidentialité de {{government_name}}"
-    rules: "Regles de {{government_name}}"
+    rules: "Règles de {{government_name}}"
   activerecord: 
     errors: 
+      full_messages: 
+        format: "{{attribute}} {{message}}"
       messages: 
         accepted: "doit être accepté"
         blank: "ne peut être vide"
         confirmation: "ne correspond à la confirmation"
         empty: "ne peut être vide"
-        equal_to: "doit être egal à {{count}}"
+        equal_to: "doit être égal à {{count}}"
         even: "doit être pair"
         exclusion: "est réservé"
         greater_than: "doit être plus grand que {{count}}"
-        greater_than_or_equal_to: "doite être plus grand ou égal à {{count}}"
+        greater_than_or_equal_to: "doit être plus grand ou égal à {{count}}"
         inclusion: "n'est pas inclus dans la liste"
         invalid: "est invalide"
         less_than: "doit être plus petit que {{count}}"
         less_than_or_equal_to: "doit être plus petit ou égal à {{count}}"
         not_a_number: "n'est pas un nombre"
         odd: "doit être impair"
-        record_invalid: "Erreur(s)  de validation: {{errors}}"
+        record_invalid: "Erreur(s)  de validation : {{errors}}"
         taken: "est déjà pris"
         too_long: "est trop long (maximum {{count}} caractères)"
         too_short: "est trop court (minimum {{count}} caractères)\n"
@@ -55,7 +57,7 @@ fr:
     endorsement: 
       replaced: 
         noself: "{{user_name}} préfère soutenir {{new_priority_name}}\n"
-        nouser: "Soutiens {{new_priority_name}} au lieu de {{priority_name}}\n"
+        nouser: "Soutient {{new_priority_name}} au lieu de {{priority_name}}\n"
     following: 
       delete: 
         name: "{{user_name}} a arreté de suivre {{other_user_name}}\n"
@@ -180,7 +182,15 @@ fr:
   dont: NON
   endorse: 
     capitalize: Soutenir
-    ed: soutenu
+    delete: 
+      title: "Retirer de la liste de mes priorités"
+    ed: soutenues
+    ing: Soutien
+    name: soutien
+    people: Partisans
+    plural: soutiens
+    title: "Je soutiens cette priorité, l'ajouter à ma liste"
+    you: "VOUS SOUTENEZ"
   endorsements: 
     change: changer
     delete: 
@@ -194,6 +204,8 @@ fr:
         action: "Invitez vos amis Facebook à rejoindre votre réseau à {{government_name}}"
         button: "Oui, je veux m'investir"
       success: "{{number}} amis Facebook invités"
+  feeds: 
+    rss: "Flux RSS"
   ignore: 
     capitalize: Ignorer
     delete: 
@@ -213,20 +225,41 @@ fr:
     about: 
       faq: FAQ
       name: "À propos"
+      privacy: "Politique de confidentialité"
       rules: Règles
       site: "À propos de ce site"
     admin: 
       apis: "Clés d'API"
+      blurbs: Extraits
+      branches: Branches
+      buddy_icon: "Icône d'ami"
       colors: Couleurs
       emails: E-mails
+      fav_icon: "Icône de site"
+      government: 
+        edit: "Informations sur la nation"
+        name: Paramètres
+      graphics: Graphiques
       logo: Logo
+      name: "Paramètres sur la nation"
       pages: Pages
+    branches: 
+      current: "Branches existantes"
+      new: "Ajouter une branche"
     briefing: 
       add_document: 
         name: "Ajouter un document"
+        title: "Les documents permettent de détailler vos idées et de collaborer avec d'autres dans un genre de wiki"
+      add_point: 
+        name: "Ajouter un sujet de discussion"
+        title: "Pouvez vous donner un argument convainquant pour ou contre cette priorité en moins de 500 caractères ? "
+      all: Tous
+      all_activity: "Toutes les activités"
+      all_documents: "Tous les documents"
+      all_points: "Tous les sujets de discussion"
       delete: 
-        confirm: "Voulez-vous vraiment effacer ceci ?"
-        name: Effacer
+        confirm: "Voulez-vous vraiment supprimer ceci ?"
+        name: Supprimer
       discussions: 
         name: Discussion
         one: "1 discussion"
@@ -235,19 +268,220 @@ fr:
         name: Documents
         one: "1 document"
         other: "{{count}} documents"
+      edit: Modifier
+      full_text: "Texte complet"
+      helpful_to: "Utile pour :"
+      name: "Salle de briefing"
+      points: 
+        name: "Sujets de conversation"
+        one: "1 sujet de conversation"
+        other: "{{count}} sujets de conversation"
+      priorities: 
+        name: Priorités
+        one: "1 priorité"
+        other: "{{count}} priorités "
+      recently_revised: "Revues récemment"
+      research: 
+        contributors: 
+          name: Contributeurs
+          one: "Rencontrer le contributeur"
+          other: "Rencontrer les {{count}} contributeurs "
+        documents_needed: "Priorités ayant besoin de documents"
+      your_priorities: "Vos priorités"
+      yours: "Vos priorités"
+    color_schemes: 
+      advanced: Avancé
+    contacts: 
+      already_members: "Déjà membres"
+      invited: Invités
+      not_invited: "Non invités"
+      number: 
+        one: "Vous avez 1 contact"
+        other: "Vous avez {{count}} contacts"
+      your_network: "Votre réseau"
+    documents: 
+      name: Documents
     inbox: 
+      incoming: "Messages privés"
+      name: "Boîte de réception"
+      notifications: Notifications
       sent: "Messages envoyés"
+    logout: Déconnexion
     network: 
+      admin: "Administrateurs uniquement"
+      ambassadors: Ambassadeurs
+      deleted: Supprimés
+      facebook: "Rechercher vos amis Facebook"
+      find: "Rechercher des connaissances"
+      grow: "Agrandir votre réseau"
       import: 
         facebook: Facebook
+        google: "Importer vos contacts Google"
+        windows: "Windows Live"
+        yahoo: Yahoo
+      influential: Influents
+      invitation: "Envoyer une invitation"
+      meet: "Rencontrer tout le monde"
+      more: Plus
       name: Réseau
       new: "Nouveaux membres"
       partners: Partenaires
       yours: "Votre réseau"
     news: 
       discussions: Discussions
+      everyone: "Tout le monde"
+      everything: Tout
+      name: Nouvelles
+      network: Réseau
+      proposals: Propositions
+      your_network: "Votre réseau"
+      your_priorities: "Vos priorités"
+    next_steps: 
+      bio: "Ajouter votre biographie"
+      facebook_friends: "Inviter vos amis Facebook"
+    partner: 
+      logo: Logo
+    points: 
+      name: "Points de discussion"
+    priorities: 
+      action: Action
+      add_ad: 
+        name: "Acheter une publicité pour cette priorité"
+        title: "Dépenser quelques {{currency_name}} pour placer cette priorité en haut de la page afin que chacun puisse la prendre en compte. "
+      add_proposal: 
+        name: "Proposer une acquisition"
+        title: "Cette priorité doit-elle fusionner avec une autre ?"
+      branch: 
+        name: "Priorités dans {{branch_name}}"
+      bury: 
+        confirm: "Vous êtes sur le point de retirer cette priorité des classements : {{priority_name}}. Ne faites ceci que pour des choses qui sont hypocrites, obscènes ou ridicules "
+        name: "Retirer des classements"
+        title: "Retirer cette priorité des classements"
+      compromised: 
+        confirm: "Vous êtes sur le point de marquer cette priorité comme terminée, mais compromise : {{priority_name}}. Veuillez faire preuve de patience, le traitement peut prendre une minute ou deux si cette priorité a de nombreux partisans"
+        name: "Marquer comme compromise"
+        title: "Marquer cette priorité comme terminée, mais compromise"
+      consider: "Priorités à examiner"
+      delete: 
+        confirm: "Voulez-vous vraiment supprimer {{priority_name}} ?"
+        name: "Supprimer cette priorité"
+        title: "Supprimer définitivement cette priorité"
+      edit: 
+        name: "Modifier cette priorité"
+        title: "Modifier cette priorité"
+      endorsers: 
+        name: Partisans
+        one: "1 partisan"
+        other: "{{count}} partisans"
+      everyone: 
+        ads: Publicités
+        controversial: Controversées
+        falling: "En baisse"
+        finished: Terminées
+        name: "Priorités de tout le monde"
+        new: Nouvelles
+        overview: Aperçu
+        random: "Au hasard"
+        rising: "En hausse"
+        short: "Tout le monde"
+        top: Top
+      failed: 
+        name: "Marquer comme échouée"
+      flag: 
+        name: Signaler
+      name: Priorités
+      network: 
+        name: "Les priorités de votre réseau"
+        short: "Votre réseau"
+      official: 
+        agenda_endorsed: Soutenue
+        agenda_opposed: Rejetée
+      opposers: 
+        name: Opposants
+        one: "1 opposant"
+        other: "{{count}} opposants"
+      yours: 
+        active: Active
+        name: "Vos priorités"
+        short: "Vos priorités"
+    profile: 
+      admin: Administrateur
+      contact: Contact
+      edit: 
+        name: "Paramètres du compte"
+      name: Profil
+    settings: 
+      account: "Votre compte"
+      name: Paramètres
+      picture: Image
+    widgets: 
+      discussions: 
+        short: Discussions
+      points: 
+        short: "Sujets de discussion"
+      priorities: 
+        short: Priorités
+  meta: 
+    rss: 
+      priorities: "Top 25 des priorités de {{government_name}} "
   new: nouveau
+  priorities: 
+    position: 
+      down: 
+        24hr: 
+          one: "Cette priorité est descendue d'une place dans le classement au cours de ces dernières 24 heures"
+          other: "Cette priorité est descendue de {{count}} places dans le classement au cours des dernières 24 heures"
+        30days: 
+          one: "Cette priorité est descendue d'une place dans le classement au cours du mois dernier"
+          other: "Cette priorité est descendue de {{count}} places dans le classement au cours du mois dernier"
+        7days: 
+          one: "Cette priorité est descendue d'une place dans le classement cette semaine"
+          other: "Cette priorité est descendue de {{count}} places dans le classement cette semaine"
+          short: 
+            one: "moins une place cette semaine"
+            other: "moins {{count}} places cette semaine"
+      new: 
+        7days: 
+          short: "nouvelle cette semaine"
+      no_change: 
+        7days: 
+          short: "pas de changement cette semaine"
+      nochange: 
+        title: "Cette priorité n'a pas changé de place dans le classement au cours de ce mois. "
+      number: "Priorité #{{position}} "
+      title: "C'est la #{{position}}e plus haute priorité parmi tous les membres de {{government_name}}. "
+      up: 
+        24hr: 
+          one: "Cette priorité est descendue d'une place dans le classement au cours de ces dernières 24 heures"
+          other: "Cette priorité est montée de {{count}} places dans le classement au cours des dernières 24 heures"
+        30days: 
+          one: "Cette priorité est montée d'une place dans le classement au cours du mois dernier"
+          other: "Cette priorité est montée de {{count}} places dans le classement au cours du mois dernier"
+        7days: 
+          one: "Cette priorité est montée d'une place dans le classement cette semaine"
+          other: "Cette priorité est montée de {{count}} places dans le classement cette semaine"
+          short: 
+            one: "gagne une place cette semaine"
+            other: "gagne {{count}} places cette semaine"
+  prioritizer: 
+    endorse: 
+      moved: 
+        msg: "Priorité {{priority_name}} montée en position #{{position}} "
+      msg: "Ajouté la priorité {{priority_name}} en position #{{position}} "
+  rank: Position
+  rss: 
+    your_comments: "Derniers commentaires dans les discussions de {{user_name}}"
+    your_notifications: "Notifications pour {{user_name}} à {{government_name}} "
+  signups: 
+    also_rss: "Vous pouvez également suivre toutes vos notifications dans un {{rss_url}} "
+  time: 
+    mo: mois
+    month: Mois
+    week: Semaine
+    wk: sem
   users: 
+    signups: 
+      also_rss: "{{rss_url}} des notifications de {{user_name}}"
     suspended: "{{user_name}} est bloqué"
   votes: 
     new: 
