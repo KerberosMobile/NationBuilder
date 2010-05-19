@@ -39,7 +39,7 @@ module ActsAsSolr
       doc = Solr::Document.new
       doc.boost = validate_boost(configuration[:boost]) if configuration[:boost]
 
-      return doc if RAILS_ENV == 'test' # crude fix
+      return doc if %w(test development).include? RAILS_ENV # crude fix
       
       doc << {:id => solr_id,
               solr_configuration[:type_field] => S3_CONFIG['bucket']+self.class.name,
