@@ -4,9 +4,9 @@ nl:
   30days: "Laatste 30 dagen"
   7days: "Laatste 7 dagen"
   about: 
-    faq: "Antwoorden voor de Veelgestelde Vragen (F.A.Q.) van {{government_name}} "
+    faq: "Antwoorden op de Veelgestelde Vragen (F.A.Q.) van {{government_name}} "
     index: "Over {{government_name}}"
-    privacy: "{{government_name}} Privacy Policy"
+    privacy: "{{government_name}} Privacy beleid"
     rules: "{{government_name}} Reglement"
   activerecord: 
     errors: 
@@ -381,27 +381,724 @@ nl:
           name: "{{user_name}} schreef een reactie op {{priority_name}}"
           noself: "{{user_name}} schreef een reactie"
           nouser: "Schreef een reactie op {{priority_name}}"
+      debut: 
+        name: 
+          known: "{{priority_name}} kwam binnen in de hitlijsten op plaats #{{position}}"
+          unknown: "{{priority_name}} kwam binnen in de hitlijsten"
+        noself: 
+          known: "Kwam binnen in de hitlijsten op plaats #{{position}}"
+          unknown: "Kwam binnen in de hitlijsten"
+      first: 
+        endorsed: 
+          name: "{{priority_name}} is de nieuwe topprioriteit van {{user_name}}"
+          noself: "Dit is de nieuwe topprioriteit van {{user_name}}"
+          nouser: "Nieuwe topprioriteit: {{priority_name}}"
+        opposed: 
+          name: "Verzet tegen {{priority_name}} is de nieuwe topprioriteit van {{user_name}}"
+          noself: "Het verzet tegen dit is de nieuwe topprioriteit van {{user_name}}"
+          nouser: "Nieuwe topprioriteit: Verzet tegen {{priority_name}}"
+      flagged: 
+        name: "{{user_name}} markeerde {{priority_name}} voor herziening"
+        noself: "{{user_name}} markeerde deze prioriteit voor herziening"
+        nouser: "Markeerde {{priority_name}} voor herziening"
+      new: 
+        name: "{{user_name}} suggereerde {{priority_name}} als eerste"
+        noself: "{{user_name}} suggereerde  deze prioriteit als eerste"
+        nouser: "Suggereerde {{priority_name}} als een nieuwe prioriteit"
+      obama_status: 
+        compromised: 
+          name: "{{priority_name}} werd zonder enig compromis afgewerkt"
+          noself: "Werd met een compromis afgewerkt"
+        failed: 
+          name: "{{priority_name}} is mislukt"
+          noself: "Deze prioriteit is mislukt"
+        intheworks: 
+          name: "Er wordt aan {{priority_name}} gewerkt"
+          noself: "Er wordt aan deze prioriteit gewerkt"
+        successful: 
+          name: "{{priority_name}} werd succesvol afgewerkt"
+          noself: "Succesvol afgewerkt"
+      renamed: 
+        name: "{{user_name}} heeft {{priority_name}} hernoemd"
+        noself: "{{user_name}} hernoemde deze prioriteit {{priority_name}}"
+        nouser: "Hernoemde deze prioriteit {{priority_name}}"
+      rising: 
+        name: "{{priority_name}} is de snelst stijgende prioriteit"
+        noself: "Dit is de snelst stijgende prioriteit"
+      tag: 
+        controversial: 
+          name: "{{priority_name}} is de meest controversiële prioriteit in {{tag_name}}"
+          noself: "Dit is de meest controversiële prioriteit in {{tag_name}}"
+        first: 
+          name: "{{priority_name}} is de nieuwe topprioriteit in {{tag_name}}"
+          noself: "Dit is de nieuwe topprioriteit in {{tag_name}}"
+        obama: 
+          first: 
+            name: "{{priority_name}} is de nieuwe topprioriteit op de {{tag_name}} agenda van {{official_user_name}}"
+            noself: "Dit is de nieuwe topprioriteit op de {{tag_name}} agenda van {{official_user_name}}"
+        rising: 
+          name: "{{priority_name}} is de snelst stijgende prioriteit in {{tag_name}}"
+          noself: "Dit is de snelst stijgende prioriteit in {{tag_name}}"
+    user: 
+      debut: 
+        name: 
+          known: "{{user_name}} kwam binnen in de meest invloedrijke hitlijst op plaats #{{position}}"
+          unknown: "{{user_name}} kwam binnen op de lijst van meest invloedrijken"
+        nouser: 
+          known: "{{user_name}} kwam binnen op de lijst van meest invloedrijken op plaats #{{position}}"
+          unknown: "Kwam binnen op de lijst van meest invloedrijken"
+      new: 
+        name: "{{user_name}} werd lid van {{government_name}}"
+        nouser: "Werd lid van {{government_name}}"
+      picture: 
+        new: 
+          name: "{{user_name}} wijzigde zijn/haar profielfoto"
+          nouser: "Wijzigde zijn/haar profielfoto"
+      probation: 
+        link: "{{user_name}} staat een week onder toezicht voor het herhaaldelijk schenden van het <a href=’/about/rules'>reglement</a>"
+        name: "{{user_name}} staat een week onder toezicht voor het herhaaldelijk schenden van het reglement"
+        nouser: "Staat een week onder toezicht voor het herhaaldelijk schenden van het <a href=’/about/rules'>reglement</a>"
+      recruited: 
+        name: "{{user_name}} recruteerde {{other_user_name}} voor {{government_name}}"
+        nouser: "{{user_name}} recruteerde {{other_user_name}} voor {{government_name}}"
+        partner: 
+          name: "{{user_name}} recruteerde {{other_user_name}} voor {{government_name}} via {{partner_url}}"
+          nouser: "Recruteerde {{other_user_name}} voor {{government_name}} via {{partner_url}}"
+  addthis: 
+    facebook: 
+      name: "Publiceer op Facebook"
+    name: "Publiceer en deel op andere sites"
+  admin: 
+    buddy_icon: "Wijzig het icoontje voor {{government_name}}"
+    fav_icon: "Wijzig het favicon voor {{government_name}}"
+    fav_icon_explanation: "Het ‘favicon’ is het kleine icoontje van 16x16 pixels dat in de browserbalk verschijnt. Op dit moment zou het er zo moeten uitzien:"
+    impersonate: "Je bent nu aangemeld als {{user_name}"
+    logo: "Wijzig het logo voor {{government_name}}"
+  ads: 
+    current: "Lopende advertenties"
+    empty: 
+      user: "{{user_name}} heeft nog geen advertenties gekocht."
+    index: 
+      title: "Alle advertenties voor {{priority_name}}"
+    new: 
+      content: 
+        label: "De boodschap die onder de link naar deze prioriteit zal verschijnen:"
+      errors: 
+        header_message: "Er was een probleem bij het aanmaken van je advertentie"
+      members: "leden en uitgaven"
+      price: "Tegen dit tarief is de kostprijs voor je advertentie"
+      showto: "Toon aan"
+      submit: "Bewaar en publiceer je advertentie"
+      success: "Kocht een advertentie voor {{priority_name}}"
+      title: "Koop een advertentie voor {{priority_name}}"
+      top25error: "Je kan geen advertentie kopen voor een prioriteit die al in de top 25 staat."
+    past: "Vroegere advertenties"
+    per_member: "per lid"
+    show: 
+      current_position: "Deze advertentie staat momenteel op plaats #{{position}}. Je kan alle lopende advertenties <a href=’{{ads_url}}’>hier</a> zien."
+      endorsed: 
+        one: "gesteund door 1 persoon"
+        other: "gesteund door {{count}} personen"
+      intro: "{{user_name}} vraagt je om {{priority_name}} te evalueren"
+      noresponse: 
+        one: "1 persoon heeft niet gereageerd"
+        other: "{{count}} personen hebben niet gereageerd"
+      opposed: 
+        one: "1 persoon is tegen"
+        other: "{{count}} personen zijn tegen"
+      seen: "Al aan {{seen_count}} van {{total_count}} leden getoond<br/>{{user_name}} spendeerde <span class='pc'>{{cost}}{{currency_short_name}}</span> of <span class='pc'>{{per_user_cost}}{{currency_short_name}}</span> per lid"
+      title: "Advertentie voor {{priority_name}}"
+    shown_to: "Getoond aan"
+    your_message: "Plaats je boodschap hier"
+    yours: 
+      intro: "Dit zijn jouw advertenties. De balkjes geven aan hoeveel leden <span class='endorsed'>&nbsp; &nbsp;</span> &nbsp;het eens zijn, <span class='opposed'>&nbsp; &nbsp;</span> &nbsp;het oneens zijn, or <span class='compromised'>&nbsp; &nbsp;</span> &nbsp;nog niet geantwoord hebben. <br/>Om een advertentie te plaatsen, klik je op één van je prioriteiten en dan Actie > Koop een advertentie."
+  application: 
+    bad_token: "Sorry, deze laatste pagina is verlopen. Gelieve nog eens te proberen."
+    fb_session_expired: "Je Facebook sessie is verlopen"
+  blurbs: 
+    destroy: "De standaard {{blurb_name}} werd teruggezet"
+    index: "Alle blurbs voor {{government_name}}"
+    new: 
+      current: "Zo ziet het er nu uit:"
+      restore: "Plaats standaard terug"
+      submit: "Bewaar je eigen blurb"
+      success: "De blurb {{blurb_name}} werd bewaard"
+      title: "Pas blurb {{blurb_name}} aan"
+  branch_endorsements: 
+    controversial: 
+      title: "Controversiële prioriteiten van {{branch_name}}"
+    falling: 
+      title: "Dalende prioriteiten van {{branch_name}}"
+    finished: 
+      title: "Afgewerkte prioriteiten van {{branch_name}}"
+    importance: 
+      less: "-{{number}} minder belangrijk voor {{branch_name}}"
+      more: "+{{number}} meer belangrijk voor {{branch_name}}"
+    newest: 
+      title: "Nieuwe prioriteiten van {{branch_name}}"
+    random: 
+      title: "Willekeurige prioriteiten van {{branch_name}}"
+    rising: 
+      title: "Stijgende prioriteiten van {{branch_name}}"
+    top: 
+      title: "Topprioriteiten van {{branch_name}}"
+  branch_users: 
+    ambassadors: 
+      title: "Ambassadeurs van {{branch_name}} in {{government_name}}"
+    influential: 
+      title: "Ontmoet de meest invloedrijke leden van {{branch_name}} in {{government_name}}"
+    newest: 
+      title: "Nieuwe leden van {{branch_name}} in {{government_name}}"
+    talkative: 
+      title: "Meest spraakzame leden van {{branch_name}} in {{government_name}}"
+    twitterers: 
+      title: "Twitterende leden van {{branch_name}} in {{government_name}}"
+  branches: 
+    default: 
+      label: "Dit is de standaard groep voor leden die nog geen groep gekozen hebben"
+      new: "Maak hier de standaard groep van voor leden die nog geen groep gekozen hebben"
+      priorities: 
+        deleted: "Deze prioriteit werd verwijderd"
+        name: prioriteiten
+        replaced: "Deze prioriteit werd vervangen door {{priority_name}}"
+      success: "Leden die nog geen groep gekozen hebben, zullen opgenomen worden in {{branch_name}}. Het klassement van hun prioriteiten zal binnen een uurtje aangepast zijn."
+    destroy: 
+      success: "{{branch_name}} werd verwijderd"
+    edit: 
+      title: "Groep bewerken"
+    index: 
+      title: "Groepen van {{government_name}}"
+    intro: "NationBuilder uses the concept of branches a bit differently than how it works in the U.S. Instead of it being Judiciary, Legislative and Executive, it’s a way to organize constituencies. For example, a corporation might have Management, Employees, Shareholders, Customers, and Partners. A government might have Politicians, Citizens, Employees, Diplomats. <p>The point of branches are to provide checks and balances so no one constituency dominates the agenda. This is the basic reason the framers of the U.S. Constitution created it, so we're keeping that spirit alive.<p>In deciding how to structure your nation, you should consider where the goals of your different constituences diverge. For example, shareholders care primarily about the stock price going up, while customers want more value, and employees want higher salaries. By separating them, it gives you a way to balance different interests and build a strong foundation for your nation.<p>Each branch will have equal weight in the rankings, so if one branch has a thousand members, and another has 2, then those 2 members will have a much bigger impact.<p> It's entirely up to you how you want to use branches, or if you want to use them at all, and keep in mind that a member can only belong to one branch at a time."
+    new: 
+      name: 
+        label: Naam
+      submit: "Bewaar groep"
+      success: "{{branch_name}} bewaard"
+      title: "Maak een nieuwe groep aan"
+  briefing: 
+    contributors: 
+      title: "{{number}} personen hebben meegewerkt aan {{briefing_name}}"
+    documents: 
+      needed: 
+        empty: "Al je prioriteiten hebben minstens één document."
+      title: "Je prioriteiten zonder documenten"
+    points: 
+      needed: 
+        empty: "Al je prioriteiten hebben minstens één standpunt dat jouw mening ondersteunt"
+      title: "Je prioriteiten zonder standpunten"
+    search: 
+      blank: "Geef een zoekterm in"
+      documents: 
+        results: "Gevonden documenten voor de zoekopdracht '{{query}}'"
+        title: "Zoek documenten in {{government_name}}"
+      empty: "Geen resultaten gevonden"
+      points: 
+        results: "Gevonden standpunten voor de zoekopdracht '{{query}}'"
+        title: "Zoek standpunten in {{government_name}}"
+      results: "Zoekresultaten in {{briefing_name}} voor de zoekopdracht '{{query}}'"
+      title: "Doorzoek {{briefing_name}} in {{government_name}}"
   bulletins: 
     new: 
+      discussion: "Start een debat"
+      document: "Start een debat over dit document"
+      name: "Wat is er gaande?"
+      point: "Start een debat over dit standpunt"
+      priority: "Wat is er gaande rond deze prioriteit?"
+      priority_discussion: "Start een debat over deze prioriteit"
+      priority_dropdown: "Verstuur naar prioriteit: (optioneel)"
       profile: "Plaats een bericht op het profiel van {{user_name}}"
       submit: "Plaats een bericht"
+  buried: weggenomen
+  cancel: Annuleer
+  changes: 
+    activities: 
+      name: "Activiteit rond deze overname"
+      title: "Activiteit rond de overname van {{priority_name}}"
+    approve: "Het voorstel werd goedgekeurd en {{user_name}} krijgt {{currency_name}}. Dit kan even duren, afhankelijk van het aantal medestanders en tegenstanders dat moet aangepast worden."
+    approved: GOEDGEKEURD
+    destroy: "De overname werd verwijderd"
+    discussion: 
+      name: "Debat over deze overname"
+    empty: "Geen voorstellen tot overname"
+    failed: MISLUKT
+    failing: "AAN HET MISLUKKEN"
+    flip: "Het voorstel wordt omgegooid"
+    insta_approve: 
+      confirm: "Hierdoor wordt de overname onmiddellijk goedgekeurd, zonder stemming"
+      name: "Keur goed zonder stemming"
+    new: 
+      already_proposed: "Er is al een overnamevoorstel van {{priority_name}}"
+      content: 
+        label: "Leg aan andere leden uit waarom ze voor deze overname zouden moeten stemmen:"
+        note: "Opmerking: als 500 tekens onvoldoende is, gebruik dan de standpunten van de andere prioriteit om aan te geven waarom deze goed is. De bedoeling is dat je hier enkel de overname zelf bepleit."
+      cost: 
+        endorsers: 
+          label: 
+            one: "1 medestander voor <span class='pc'>{{capital}}{{currency_short_name}}</span>"
+            other: "{{count}} medestanders voor <span class='pc'>{{capital}}{{currency_short_name}}</span>"
+        label: "De kost is <span class='pc'>0.01{{currency_short_name}}</span>per stembiljet, je maximum is dus"
+        opposers: 
+          label: 
+            one: "1 tegenstander voor <span class='pc'>{{capital}}{{currency_short_name}}</span>"
+            other: "{{count}} tegenstanders voor <span class='pc'>{{capital}}{{currency_short_name}}</span>"
+      is_flip: "Vink dit aan als medestanders in tegenstanders moeten veranderen (en omgekeerd)"
+      new_priority: 
+        label: "Welke prioriteit moet {{priority_name}} opnemen?"
+      submit: "Stel deze overname voor"
+      success: "Je hebt de overname door {{priority_name}} voorgesteld. {{admin_name}} zal dit bekijken en een stemming organiseren."
+    no_vote: 
+      confirm: "Dit zal het voorstel verwijderen, {{currency_name}} terugstorten en geen stemming houden."
+      name: "Hou geen stemming"
+    no_votes: 
+      one: "1 stem tegen"
+      other: "{{count}} stemmen tegen"
+    passing: "WORDT GOEDGEKEURD"
+    results: "Resultaten van de stemming"
+    saved: "De wijzigingen aan deze overname werden bewaard"
+    show: 
+      title: "Voorstel om {{priority_name}} op te nemen"
+    start: "De stemming begint. Dit kan een paar minuten duren, afhankelijk van het aantal medestanders en tegenstanders dat stembiljetten nodig heeft."
+    start_voting: 
+      confirm: "Dit zal een mail sturen om de betrokken personen aan te zetten tot stemmen."
+      name: "Start de stemming"
+    status: 
+      approved: "De stemming is voorbij, de <span class='endorsed'><a href='{{proposal_url}}'>overname werd goedgekeurd</a></span>"
+      declined: "De stemming is voorbij, de <span class='endorsed'><a href='{{proposal_url}}'>overname werd verworpen</a></span>"
+      no_vote: "Er wordt geen stemming gehouden"
+      not_started: "De stemming is nog niet begonnen"
+    stop: "Het voorstel wordt verwijderd en {{currency_name}} wordt teruggestort aan {{user_name}}"
+    voting_underway: "De stemming is aan de gang! Nog {{time_left}} om te <a href='{{vote_url}}'>stemmen</a>."
+    yes_votes: 
+      one: "1 stem voor"
+      other: "{{count}} stemmen voor"
+  characters_left: "tekens over"
+  charts: 
+    30day: 
+      name: "resultaten over 30 dagen"
+    change: Wijzig
+    gainers_24hr: 
+      intro: "Stel je de prioriteiten van elke persoon voor als aandelen op de beurs. Deze pagina wordt telkens om middernacht aangepast met de personen wiens prioriteiten het snelst gestegen zijn in de laatste 24 uur."
+      title: "Personen met de snelst stijgende prioriteiten in de laatste 24 uur"
+    gainers_30days: 
+      intro: "Stel je de prioriteiten van elke persoon voor als aandelen op de beurs. Deze pagina wordt telkens om middernacht aangepast met de personen wiens prioriteiten het snelst gestegen zijn in de laatste maand."
+      title: "Personen met de snelst stijgende prioriteiten deze maand"
+    gainers_7days: 
+      intro: "Stel je de prioriteiten van elke persoon voor als aandelen op de beurs. Deze pagina wordt telkens om middernacht aangepast met de personen wiens prioriteiten het snelst gestegen zijn in de laatste week."
+      title: "Personen met de snelst stijgende prioriteiten deze week"
+    issues: 
+      label: dalend/stijgend
+      title: "Meest actieve {{tags_name}} in {{government_name}}"
+    losers_24hr: 
+      intro: "Stel je de prioriteiten van elke persoon voor als aandelen op de beurs. Deze pagina wordt telkens om middernacht aangepast met de personen wiens prioriteiten het snelst zijn gedaald in de laatste 24 uur."
+      title: "Personen met de snelst dalende prioriteiten in de laatste 24 uur"
+    losers_30days: 
+      intro: "Stel je de prioriteiten van elke persoon voor als aandelen op de beurs. Deze pagina wordt telkens om middernacht aangepast met de personen wiens prioriteiten het snelst zijn gedaald in de laatste maand."
+      title: "Personen met de snelst dalende prioriteiten in de laatste maand"
+    losers_7days: 
+      intro: "Stel je de prioriteiten van elke persoon voor als aandelen op de beurs. Deze pagina wordt telkens om middernacht aangepast met de personen wiens prioriteiten het snelst zijn gedaald in de laatste week."
+      title: "Personen met de snelst dalende prioriteiten in de laatste week"
+    priority: 
+      name: "Hitlijst van prioriteiten"
+      title: "Volgt de beweging van deze prioriteit in de hitlijsten op. Hoe lager het getal, hoe beter. De hitlijsten worden beïnvloed door het aantal mensen dat deze prioriteit op hun lijst heeft staan en op welke positie."
+      volume: 
+        name: AANTAL
+    user: 
+      name: "Agenda van {{user_name}}"
+      obama: 
+        title: "Vergelijkt hoe de prioriteiten van {{user_name}} (groen) het in de hitlijsten deden ten opzichte van {{official_user_name}} (blauw). Hoe meer mensen de prioriteiten op de agenda van {{user_name}} ondersteunen, hoe hoger hij stijgt."
+      title: "Volgt de bewegingen van de prioriteiten van {{user_name}} in de hitlijsten gedurende de laatste 30 dagen. Hoe meer mensen de prioriteiten op de agenda van {{user_name}} ondersteunen, hoe hoger hij stijgt."
+  check_uncheck: "Selecteer alle/geen"
+  comments: 
+    abusive: "De reactie werd verwijderd. De auteur kreeg een waarschuwing voor het schenden van het <a href='/about/rules'>reglement</a>"
+    account_deleted: "Verborgen omdat {{user_name}} zijn/haar acount verwijderde"
+    account_suspended: "Verborgen omdat de account van {{user_name}} geschorst werd"
+    add: Reageer
+    delete: 
+      confirm: "Verwijder deze reactie?"
+    deleted: "Deze reactie werd verwijderd"
+    discuss: 
+      name: Debatteer
+    discussions: 
+      more: 
+        one: "Nog 1 ander debat in {{priority_name}}"
+        other: "Nog {{count}} andere debatten in {{priority_name}}"
+      name: 
+        one: "1 debat"
+        other: "{{count}} debatten"
+    edit: 
+      title: "Bewerk reactie"
+    flag: 
+      confirm: "Is deze reactie van {{user_name}} een persoonlijke aanval of een schending van het reglement?"
+      issue_warning: 
+        action: "Geef {{user_name}} waarschuwing #{{warnings_count}}"
+        ing: "Waarschuwing wordt gegeven"
+        name: "Geef een waarschuwing"
+      title: "Markeer deze reactie voor herziening"
+    full: 
+      hide: "verberg de volledige reactie"
+      show: "toon de volledige reactie"
+    ignoring: "Verborgen omdat je {{user_name}} negeert"
+    name: 
+      link: 
+        one: "<a href='{{comment_url}}'>1 reactie</a>"
+        other: "<a href='{{comment_url}}'>{{count}} reacties</a>"
+      one: "1 reactie"
+      other: "{{count}} reacties"
+    new: 
+      submit: "Schrijf een reactie"
+      success: "Reactie bewaard"
+    participate_intro: "Als je wil deelnemen, <a href='{{signup_url}}'>schrijf je dan in</a>. Lidmaatschap is gratis en je kan zelfs je bestaande Facebook account gebruiken."
+    people: "Personen die gereageerd hebben"
+    permalink: Permalink
+    show: toon
+  constituents: 
+    index: "Kiezers van {{legislator_name}}"
+    priorities: "Prioriteiten van de kiezers van {{legislator_name}}"
+    show: "{{user_name}} is een kiezer van {{legislator_name}}"
+  contacts: 
+    following: 
+      title: "Personen die je volgt in {{government_name}}"
+    index: 
+      title: "Vind personen die je kent in {{government_name}}"
+    invited: 
+      empty: "Je hebt nog niemand uitgenodigd."
+      intro: "Dit zijn personen die je uitgenodigd hebt, maar die nog geen lid geworden zijn."
+      title: "Personen die je uitgenodigd hebt om lid te worden van {{government_name}}"
+    members: 
+      intro: "{{contacts_count}} van je contacten zijn al lid van {{government_name}}.<br/>Klik op de grote gele knop om ze aan je netwerk toe te voegen."
+      submit: "De geselecteerde leden werden aan je netwerk toegevoegd"
+      title: "Zijn al leden van {{government_name}}"
+    multiple: 
+      blank: "Vink alle personen aan die je wilt volgen"
+      success: "Bedankt dat je mensen hebt uitgenodigd om lid te worden van {{government_name}}. We sturen je een mailtje wanneer ze lid worden en zelf verdien je er ook nog 5{{currency_short_name}} aan."
+    new: 
+      already_invited: "Je hebt {{user_name}} al uitgenodigd"
+      already_member: "{{user_name}} is al lid"
+      import: 
+        example: "werkt met Google, Yahoo, Windows Live en Facebook"
+        name: "Importeer je contacten"
+      invited: "{{user_name}} werd uitgenodigd"
+      is_from_realname: 
+        label: "Zal ik je echte naam gebruiken of je bijnaam?"
+      preview: 
+        from: "Van:"
+        from_name: "JOUW NAAM"
+        heading: "Zo zal de email eruit zien"
+        subject: "Onderwerp:"
+        to: "Aan:"
+        to_email: "HUN EMAIL"
+        to_name: "HUN NAAM"
+      submit: "Stuur een uitnodiging per email"
+      title: "Nodig mensen uit om lid te worden van {{government_name}}"
+      to_email: 
+        label: "Hun email"
+      to_name: 
+        label: "Hun naam"
+    not_invited: 
+      intro: "{{contacts_count}} van je contacten zijn <i>geen</i> lid van {{government_name}}.<br/>Vink de personen aan die je wil uitnodigen en klik dan op de grote gele knop."
+      submit: "De aangevinkte personen worden uitgenodigd om lid te worden van {{government_name}}"
+      title: "Er zijn nog geen leden, ga verder en nodig hen uit."
+  currency: 
+    empty: "{{user_name}} heeft nog geen {{currency_name}} verdiend."
+  date: 
+    abbr_day_names: 
+      - Zo
+      - Ma
+      - Di
+      - Wo
+      - Do
+      - Vr
+      - Za
+      - Zo
+    abbr_month_names: 
+      - ~
+      - jan
+      - feb
+      - maa
+      - apr
+      - mei
+      - jun
+      - jul
+      - aug
+      - sep
+      - okt
+      - nov
+      - dec
+    day_names: 
+      - zondag
+      - maandag
+      - dinsdag
+      - woensdag
+      - donderdag
+      - vrijdag
+      - zaterdag
+    formats: 
+      default: "%d/%m/%Y"
+      long: "%d %B %Y"
+      short: "%d %b "
+    month_names: 
+      - ~
+      - januari
+      - februari
+      - maart
+      - april
+      - mei
+      - juni
+      - juli
+      - augustus
+      - september
+      - oktober
+      - november
+      - december
+    order: 
+      - !ruby/symbol dag
+      - !ruby/symbol maand
+      - !ruby/symbol jaar
+  datetime: 
+    distance_in_words: 
+      about_x_hours: 
+        many: "ongeveer {{count}} uur"
+        one: "ongeveer een uur"
+        other: "ongeveer {{count}} uur"
+      about_x_months: 
+        many: "ongeveer {{count}} maanden"
+        one: "ongeveer een maand"
+        other: "ongeveer {{count}} maanden"
+      about_x_years: 
+        many: "ongeveer {{count}} jaar"
+        one: "ongeveer een jaar"
+        other: "ongeveer {{count}} jaar"
+      almost_x_years: 
+        one: "bijna een jaar"
+        other: "bijna {{count}} jaar"
+      half_a_minute: "een halve minuut"
+      less_than_x_minutes: 
+        many: "minder dan {{count}} minuten"
+        one: "minder dan een minuut"
+        other: "minder dan {{count}} minuten"
+      less_than_x_seconds: 
+        many: "minder dan {{count}} seconden"
+        one: "minder dan één seconde"
+        other: "minder dan {{count}} seconden"
+      over_x_years: 
+        many: "binnen {{count}} jaar"
+        one: "binnen een jaar"
+        other: "binnen {{count}} jaar"
+      x_days: 
+        many: "{{count}} dagen"
+        one: "één dag"
+        other: "{{count}} dagen"
+      x_minutes: 
+        many: "{{count}} minuten"
+        one: "één minuut"
+        other: "{{count}} minuten"
+      x_months: 
+        many: "{{count}} maanden"
+        one: "één maand"
+        other: "{{count}} maanden"
+      x_seconds: 
+        many: "{{count}} seconden"
+        one: "één seconde"
+        other: "{{count}} seconden"
+    prompts: 
+      day: Dag
+      hour: Uur
+      minute: minuut
+      month: maand
+      second: seconden
+      year: jaar
   document: 
+    activity: 
+      title: "Activiteit rond {{document_name}}"
+    deleted: "Dat document werd verwijderd"
+    destroy: 
+      error: "Alleen de eigenaar van een document kan het verwijderen"
+    discussions: 
+      title: "Debatten over {{document_name}}"
+    edit: 
+      title: "Bewerk {{document_name}}"
+    empty: "Nog geen documenten."
+    helpful: 
+      endorsers: "Documenten die nuttig zijn voor medestanders"
+      opposers: "Documenten die nuttig zijn voor tegenstanders"
+      undeclared: "Documenten die nuttig zijn voor onbeslisten"
+    intro: 
+      endorsed: "Documenten die {{priority_name}} ondersteunen"
+      neutral: "Document over {{priority_name}}"
+      opposed: "Document <span class='opposed'>tegen</span> {{priority_name}}:"
+    name: documenten
+    new: 
+      save: "{{document_name}} werd bewaard"
+      success: "Bedankt voor het toevoegen van {{document_name}}"
+      title: "Voeg een document toe aan {{priority_name}}"
+    newest: 
+      title: "Meest recente documenten"
     no_revisions: "Geen enkel document werd recent herzien"
     revised: 
       title: "Recent herziene documenten"
     revision: 
+      clean: 
+        intro: "Dit is hoe het document er {{time_ago}} geleden uitzag. Je kan ook de <a href='{{revision_url}}'>wijzigingen</a> tegenover de vorige versie bekijken."
       new: 
+        cancel: "Annuleer deze herziening"
+        content: 
+          label: "Waarom heb je deze wijziging gemaakt?"
         intro: 
           endorse: "Dit document mag enkel herzien worden door personen die {{priority_name}} steunen. Documenten vormen immers een samenwerking tussen personen met eenzelfde standpunt. Dus, als u tegen bent, gelieve dan <a href='{{new_document_url}}'>een nieuw document te starten</a> om uit te weiden over uw ideeën."
           oppose: "Dit document mag enkel herzien worden door personen die tegen {{priority_name}}. Documenten vormen immers een samenwerking tussen personen met eenzelfde standpunt. Dus, als u voor bent, gelieve dan <a href='{{new_document_url}}'>een nieuw document te starten</a> om uit te weiden over uw ideeën."
+        name: 
+          label: "Titel <span class='small'>60 tekens</span>"
+        position: 
+          label: "Is dit document {{support_radio}} voor {{neutral_radio}} neutraal of {{oppose_radio}} tegen {{priority_name}}?"
+        submit: "Bewaar document"
+        success: "De herziening van {{document_name}} werd bewaard"
+        title: "Herzie {{document_name}}"
+      sentence: "{{sentence}} werd toegevoegd"
       show: 
+        intro: "Hier zie je de wijzigingen tegenover de vorige herziening. Je kan ook de <a href='{{clean_url}}'>propere versie bekijken</a>"
         title: "{{document_name}} - herzien door {{use_name}}"
+    title: Documenten
+    your_priorities: 
+      title: "Meest recente documenten over jouw prioriteiten"
+    yours: 
+      title: "Jouw documenten"
+  doit: JA
+  dont: NEE
+  endorse: 
+    capitalize: Steun
+    delete: 
+      title: "Verwijder van mijn lijst met prioriteiten"
+    ed: gesteund
+    name: steun
+    people: Medestanders
+    plural: medestanders
+    title: "I steun dit, voeg het toe aan mijn prioriteitenlijst"
+    you: "JE STEUNT DIT"
+  endorsements: 
+    change: wijzig
+    delete: 
+      title: "Klik op de X om deze prioriteit van je lijst te verwijderen"
+    empty: "Je steunt nog geen prioriteiten. Voor wat inspiratie kan je misschien een paar <a href='/priorities/random'>willekeurige prioriteiten</a> bekijken?"
+    position: 
+      title: "Klik op het getal om de positie in je lijst te wijzigen. Je kan de namen ook slepen om de volgorde te wijzigen."
+      yours: "Jouw {{position}}e prioriteit."
+    priority1: Topprioriteit
+    save: bewaar
+  facebook: 
+    invite: 
+      connect: "Klik op deze knop om een verbinding te maken met Facebook en je vrienden op te zoeken"
+      members: 
+        one: "1 Facebook vriend(in) is al lid van {{government_name}} en werd toegevoegd aan <a href='{{network_url}}'>je netwerk</a>.<br/>Je kan zijn/haar <a href='{{news_url}}'>updates volgen in de nieuws sectie</a>."
+        other: "{{count}} Facebook vrienden zijn al lid van {{government_name}} en werden toegevoegd aan <a href='{{network_url}}'>je netwerk</a>.<br/>Je kan hun <a href='{{news_url}}'>updates volgen in de nieuws sectie</a>."
+      nomembers: "Geen van je Facebook vrienden is al lid van {{government_name}}"
+      request: 
+        action: "Nodig je Facebook vrienden uit om lid te worden van je netwerk in {{government_name}}"
+        button: "Ja, ik wil meewerken"
+      success: "{{number}} van je Facebook vrienden werden uitgenodigd"
+      title: "Nodig je Facebook vrienden uit om lid te worden van {{government_name}}"
+    synced: "Je account is nu gekoppeld met Facebook. Vanaf nu kan je je aanmelden door gewoon op de grote blauwe Facebook knop te klikken."
+  feeds: 
+    activity: "Feed van activiteiten"
+    column: 
+      heading: "Nieuws van andere sites"
+    discussions: "Feed van reacties"
+    rss: "RSS Feed"
+    via: "via {{source}}"
+  follow: 
+    capitalize: Volg
+    delete: 
+      title: "Verwijder deze persoon uit je netwerk"
+    ing: "Je volgt"
+    name: volg
+    title: "Ik wil de reacties en activiteit van deze persoon volgen"
+  following: 
+    new: 
+      success: "Je volgt nu {{user_name}}"
+  following_discussions: 
+    new: 
+      ing: "Je volgt dit debat"
+      name: "Volg dit debat"
+      success: "Je zal verwittigd worden wanneer anderen in dit debat reageren"
+  government: 
+    settings: 
+      is_branches: 
+        label: "Activeer groepen binnen het bestuur"
+  helpful: 
+    both: 
+      one: "1 persoon vond dit nuttig, {{other_count}} niet"
+      other: "{{count}} personen vonden dit nuttig, {{other_count}} niet"
+    capitalized: Nuttig?
+    caps: NUTTIG
+    delete: 
+      title: "Dit is niet langer nuttig"
+    endorsers: 
+      both: 
+        one: "1 medestander vond dit nuttig, {{other_count}} niet"
+        other: "{{count}} medestanders vonden dit nuttig, {{other_count}} niet"
+      chart: "Nuttig voor medestanders"
+      first: 
+        one: "1 medestander vond dit nuttig"
+        other: "{{count}} medestanders vonden dit nuttig"
+      title: "Nuttig voor medestanders?"
+    first: 
+      one: "1 persoon vond dit nuttig"
+      other: "{{count}} personen vonden dit nuttig"
+    ing: "Wordt gemarkeerd als nuttig"
+    name: nuttig
+    opposers: 
+      both: 
+        one: "1 tegenstander vond dit nuttig, {{other_count}} niet"
+        other: "{{count}} tegenstanders vonden dit nuttig, {{other_count}} niet"
+      chart: "Nut voor tegenstanders"
+      first: 
+        one: "1 tegenstander vond dit nuttig"
+        other: "{{count}} tegenstanders vonden dit nuttig"
+      title: "Nuttig voor tegenstanders?"
+    question: "Is dit nuttig?"
+    title: "Dit is nuttig"
+    to: 
+      ? "-- one"
+      : "Bekijk alle <a href='{{everyone_link}}'>documenten</a>, of alleen documenten die nuttig zijn voor <a href='{{endorser_link}}'>medestanders</a>, <a href='{{opposer_link}}'>tegenstanders</a>, of <a href='{{undeclared_link}}'>onbeslisten</a>."
+      other: "Bekijk alle <a href='{{everyone_link}}'>documenten</a>, of alleen documenten die nuttig zijn voor <a href='{{endorser_link}}'>medestanders</a>, <a href='{{opposer_link}}'>tegenstanders</a>, of <a href='{{undeclared_link}}'>onbeslisten</a>."
+    undeclared: 
+      both: 
+        one: "1 onbesliste vond dit nuttig, {{other_count}} niet"
+        other: "{{count}} onbeslisten vonden dit nuttig, {{other_count}} niet"
+      chart: "Nut voor onbeslisten"
+      first: 
+        one: "1 onbesliste vond dit nuttig"
+        other: "{{count}} onbeslisten vonden dit nuttig"
+      title: "Nuttig voor onbeslisten?"
+  ignore: 
+    capitalize: Negeer
+    delete: 
+      title: "Stop met het negeren van deze persoon"
+    ing: "Aan het negeren"
+    name: negeer
+    title: "Ik wil de reacties en activiteit van deze persoon negeren"
+  import: 
+    buttons: 
+      facebook: "Nodig Facebook vrienden uit"
+      google: "Importeer Google contacts"
+      windows: "Windows Live contacts"
   menu: 
     about: 
       faq: Vragen
       name: "Over ons"
+      privacy: "Privacy beleid"
       rules: Afspraken
       site: "Over deze site"
+    admin: 
+      apis: "API sleutels"
+      colors: Kleuren
+      emails: E-mails
+      fav_icon: "Fav Icon"
+      government: 
+        name: Settings
+      logo: Logo
+    branches: 
+      current: "Bestaande groepen"
+      new: "Voeg een groep toe"
     briefing: 
       add_document: 
         name: "Voeg een document toe"
@@ -448,7 +1145,28 @@ nl:
         other: "{{count}} herzieningen"
       your_priorities: "Jouw prioriteiten"
       yours: "Van jou"
+    priorities: 
+      branch: 
+        name: "prioriteiten van {{branch_name}}"
+  news: 
+    comments: 
+      title: "Meest recent reacties in {{government_name}}"
   notification: 
+    comment: 
+      activity: 
+        link: "{{sender_name}} reageerde op <a href='{{comment_url}}'>activiteit van {{user_name}}</a>"
+        name: "{{sender_name}} reageerde op activiteit van {{user_name}}"
+        yours: 
+          link: "{{sender_name}} reageerde op <a href='{{comment_url}}'>jouw activiteit</a>"
+          name: "{{sender_name}} reageerde op jouw activiteit"
+      name: "{{sender_name}} reageerde op {{comment_name}}"
+      new: 
+        link: 
+          one: "1 nieuwe reactie"
+          other: "{{count}} nieuwe reacties"
+      profile: 
+        link: "{{sender_name}} liet een reactie achter op het <a href='{{comment_url}}'>profiel van {{user_name}}</a>"
+        name: "{{sender_name}} liet een reactie achter op het profiel van {{user_name}}"
     document: 
       revision: 
         name: "{{sender_name}} herzag {{document_name}}"
@@ -459,11 +1177,73 @@ nl:
       bulletin: 
         name: "{{sender_name}} plaatste een bericht op je profiel"
         with_link: "{{sender_name}} plaatste een <a href='{{bulletin_url}}'>bericht</a> op je profiel"
+    warning1: 
+      with_link: "Dit is je eerste waarschuwing. Je schondt het <a href='/about/rules'>reglement</a> met <a href='{{comment_url}}'>deze reactie</a>."
+    warning2: 
+      with_link: "Dit is je tweede waarschuwing. Je schondt het <a href='/about/rules'>reglement</a> met <a href='{{comment_url}}'>deze reactie</a>."
+    warning3: 
+      with_link: "Dit is je derde waarschuwing. Je schondt het <a href='/about/rules'>reglement</a> met <a href='{{comment_url}}'>deze reactie</a>. Je staat nu onder toezicht."
   points: 
+    helpful: 
+      endorsers: "Standpunten die nuttig zijn voor medestanders"
+      opposers: "Standpunten die nuttig zijn voor tegenstanders"
+      undeclared: "Standpunten die nuttig zijn voor onbeslisten"
     revised: 
       empty: "Geen enkel standpunt werd recent herzien"
       title: "Recent herziene standpunten"
+  priorities: 
+    comments: 
+      title: "Meest recente reacties op {{priority_name}}"
+    endorsers: 
+      branch: 
+        one: "1 {{branch_name}} steunt dit"
+        other: "{{count}} medestanders zijn van {{branch_name}}"
+    opposers: 
+      branch: 
+        one: "1 {{branch_name}} is tegen"
+        other: "{{count}} tegenstanders zijn van {{branch_name}}"
   revisions: 
     revised: "herzien {{time_ago}}"
+  rss: 
+    your_comments: "Meest recente reacties op de debatten van {{user_name}}"
+  settings: 
+    branch_change: 
+      success: "Je groep werd bewaard als {{branch_name}}"
+  unhelpful: 
+    both: 
+      one: "1 persoon vond dit <i>niet</i> nuttig, {{other_count}} niet"
+      other: "{{count}} personen vonden dit <i>niet</i>nuttig, {{other_count}} niet"
+    delete: 
+      title: "Dit is niet langer nuttig"
+    endorsers: 
+      both: 
+        one: "1 medestander vond dit <i>niet</i> nuttig, {{other_count}} wel"
+        other: "{{count}} medestanders vonden dit <i>niet</i>nuttig, {{other_count}} wel"
+      first: 
+        one: "1 medestander vond dit <i>niet</i> nuttig"
+        other: "{{count}} medestanders vonden dit <i>niet</i>nuttig"
+    first: 
+      one: "1 persoon vond dit <i>niet</i> nuttig"
+      other: "{{count}} personen vonden dit <i>niet</i>nuttig"
+    ing: "Wordt gemarkeerd als niet nuttig"
+    name: "niet nuttig"
+    opposers: 
+      both: 
+        one: "1 tegenstander vond dit <i>niet</i> nuttig, {{other_count}} wel"
+        other: "{{count}} tegenstanders vonden dit <i>niet</i>nuttig, {{other_count}} wel"
+      first: 
+        one: "1 tegenstander vond dit <i>niet</i> nuttig"
+        other: "{{count}} tegenstanders vonden dit <i>niet</i>nuttig"
+    title: "Dit is niet nuttig"
+    undeclared: 
+      both: 
+        one: "1 onbesliste vond dit <i>niet</i> nuttig, {{other_count}} niet"
+        other: "{{count}} onbeslisten vonden dit <i>niet</i>nuttig, {{other_count}} niet"
+      first: 
+        one: "1 onbesliste vond dit <i>niet</i> nuttig"
+        other: "{{count}} onbeslisten vonden dit <i>niet</i>nuttig"
   unsubscribe: 
     messages: "Persoonlijke boodschappen en profielberichten"
+  users: 
+    comments: 
+      title: "{{user_name}} reageerde in {{government_name}}"

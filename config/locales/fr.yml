@@ -326,14 +326,23 @@ fr:
       name: Réseau
       new: "Nouveaux membres"
       partners: Partenaires
+      suspended: Suspendus
+      talkative: Bavards
+      twitterers: Twitterers
+      unverified: "Non vérifiés"
+      warnings: Avertissements
       yours: "Votre réseau"
     news: 
       discussions: Discussions
       everyone: "Tout le monde"
       everything: Tout
+      followers: Abonnés
       name: Nouvelles
       network: Réseau
+      official_user_activity: "Activité de {{official_user_name}}"
       proposals: Propositions
+      your_activity: "Votre activité"
+      your_followers: "Vos abonnés"
       your_network: "Votre réseau"
       your_priorities: "Vos priorités"
     next_steps: 
@@ -409,6 +418,8 @@ fr:
       contact: Contact
       edit: 
         name: "Paramètres du compte"
+      followers: Abonnés
+      following: Abonnements
       name: Profil
     settings: 
       account: "Votre compte"
@@ -424,8 +435,24 @@ fr:
   meta: 
     rss: 
       priorities: "Top 25 des priorités de {{government_name}} "
+  network: 
+    talkative: 
+      title: "Les plus bavards sur {{government_name}} "
   new: nouveau
   priorities: 
+    ads: 
+      title: "Publicités en cours sur {{government_name}}"
+    controversial: 
+      name: "Priorités controversées"
+    edit: 
+      name: 
+        label: "Nom de la priorité"
+      submit: "Enregistrer la priorité"
+      success: "{{priority_name}} enregistrée"
+      title: "Modification de {{priority_name}} "
+    name: priorités
+    newest: 
+      name: "Nouvelles priorités"
     position: 
       down: 
         24hr: 
@@ -463,6 +490,8 @@ fr:
           short: 
             one: "gagne une place cette semaine"
             other: "gagne {{count}} places cette semaine"
+    yours: 
+      name: "Vos priorités"
   prioritizer: 
     endorse: 
       moved: 
@@ -472,6 +501,15 @@ fr:
   rss: 
     your_comments: "Derniers commentaires dans les discussions de {{user_name}}"
     your_notifications: "Notifications pour {{user_name}} à {{government_name}} "
+  sessions: 
+    new: 
+      intro: "<b><a href='{{signup_url}}'>S'enregistrer</a></b> ou <a href='#' id='login_link'>Se connecter à  {{government_name}}</a>. "
+      login: 
+        facebook: Facebook
+        twitter: Twitter
+      password: 
+        label: "Mot de passe"
+      submit: Connexion
   signups: 
     also_rss: "Vous pouvez également suivre toutes vos notifications dans un {{rss_url}} "
   time: 
