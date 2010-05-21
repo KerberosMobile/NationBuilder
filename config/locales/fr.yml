@@ -35,6 +35,9 @@ fr:
         wrong_length: "doit contenir {{count}} caractères"
       template: 
         body: "Les champs suivants posent problème:"
+        header: 
+          one: "Une erreur empêche d'enregistrer ce {{model}}"
+          other: "{{count}} erreurs empêchent d'enregistrer ce {{model}}"
   activities: 
     empty: "Aucune activité pour l'instant."
   activity: 
@@ -50,12 +53,190 @@ fr:
         new: 
           name: "{{user_name}} a publié un bulletin sur le profil de {{other_user_name}}"
           nouser: "Publié un bulletin sur le profil de {{other_user_name}}"
+    capital: 
+      acquisition: 
+        proposal: 
+          approved: 
+            name: "{{user_name}} a gagné {{capital}}{{currency_short_name}} car {{new_priority_name}} a pu acquérir {{priority_name}} "
+            nouser: "Gagné {{capital}}{{currency_short_name}} car {{new_priority_name}} a pu acquérir {{priority_name}} "
+          deleted: 
+            name: "{{user_name}} a été remboursé de {{capital}}{{currency_short_name}} car aucun vote ne sera tenu sur l'acquisition de {{priority_name}} par {{new_priority_name}}"
+            nouser: "A été remboursé de {{capital}}{{currency_short_name}} car aucun vote ne sera tenu sur l'acquisition de {{priority_name}} par {{new_priority_name}}"
+          new: 
+            link: "{{user_name}} a dépensé {{capital}}{{currency_short_name}} sur une <a href='{{proposal_url}}'>proposition</a> d'acquisition de {{priority_name}} par {{new_priority_name}}"
+            name: "{{user_name}} a dépensé {{capital}}{{currency_short_name}} sur une proposition d'acquisition de {{priority_name}} par {{new_priority_name}}"
+            noself: "{{user_name}} a dépensé {{capital}}{{currency_short_name}} sur une <a href='{{proposal_url}}'>proposition</a> d'acquisition de cette priorité par {{new_priority_name}} "
+            nouser: "Dépensé {{capital}}{{currency_short_name}} sur une <a href='{{proposal_url}}'>proposition</a> d'acquisition de {{priority_name}}  par {{new_priority_name}}"
+      ad: 
+        new: 
+          link: "{{user_name}} a dépensé {{capital}}{{currency_short_name}} pour une <a href='{{ad_url}}'>publicité</a> pour {{priority_name}} "
+          name: "{{user_name}} a dépensé {{capital}}{{currency_short_name}} pour une publicité pour {{priority_name}} "
+          noself: "{{user_name}} a dépensé {{capital}}{{currency_short_name}} sur une <a href='{{ad_url}}'>publicité</a> pour cette priorité"
+          nouser: "Dépensé {{capital}}{{currency_short_name}} pour une <a href='{{ad_url}}'>publicité</a> pour {{priority_name}} "
+      followers: 
+        earned: 
+          name: 
+            one: "{{user_name}} a gagné {{count}}{{currency_short_name}} pour 1 nouvel abonné"
+            other: "{{user_name}} a gagné {{count}}{{currency_short_name}} pour {{count}} nouveaux abonnés"
+          nouser: 
+            one: "Gagné {{count}}{{currency_short_name}} pour 1 nouvel abonné"
+            other: "Gagné {{count}}{{currency_short_name}} pour {{count}} nouveaux abonnés"
+        lost: 
+          name: 
+            one: "{{user_name}} a perdu {{count}}{{currency_short_name}} pour 1 abonné de moins"
+            other: "{{user_name}} a perdu {{count}}{{currency_short_name}} pour {{count}} abonnés de moins"
+          nouser: 
+            one: "Perdu {{count}}{{currency_short_name}} pour 1 abonné de moins"
+            other: "Perdu {{count}}{{currency_short_name}} pour {{count}} abonnés de moins"
+      government: 
+        new: 
+          name: "{{user_name}} a gagné {{capital}}{{currency_short_name}} pour avoir fondé cette nation "
+          nouser: "Gagné {{capital}}{{currency_short_name}} pour avoir fondé cette nation "
+      ignorers: 
+        earned: 
+          name: 
+            one: "{{user_name}} a gagné {{count}}{{currency_short_name}} car quelqu'un a cessé de l'ignorer"
+            other: "{{user_name}} a gagné {{count}}{{currency_short_name}} car {{count}} personnes ont cessé de l'ignorer"
+          nouser: 
+            one: "Gagné {{count}}{{currency_short_name}} car quelqu'un a cessé d'ignorer"
+            other: "Gagné {{count}}{{currency_short_name}} car {{count}} personnes ont cessé d'ignorer"
+        lost: 
+          name: 
+            one: "{{user_name}} a perdu {{count}}{{currency_short_name}} car quelqu'un a ignoré"
+            other: "{{user_name}} a perdu {{count}}{{currency_short_name}} car {{count}} personnes ont ignoré"
+          nouser: 
+            one: "Perdu {{count}}{{currency_short_name}} car quelqu'un a ignoré"
+            other: "Perdu {{count}}{{currency_short_name}} car {{count}} personnes ont ignoré"
+      inactive: 
+        name: "{{user_name}} a perdu {{capital}}{{currency_short_name}} pour ne pas s'être connecté(e) récemment"
+        nouser: "Perdu {{capital}}{{currency_short_name}} pour ne pas s'être connecté(e) récemment"
+      legislators: 
+        added: 
+          name: "{{user_name}} a gagné {{capital}}{{currency_short_name}} pour avoir ajouté des législateurs à son compte"
+          nouser: "Gagné {{capital}}{{currency_short_name}} pour avoir ajouté des législateurs à son compte"
+      obama_letter: 
+        name: "{{user_name}} a gagné {{capital}}{{currency_short_name}} pour avoir envoyé son agenda à {{official_user_name}} "
+        nouser: "Gagné {{capital}}{{currency_short_name}} pour avoir envoyé son agenda à  {{official_user_name}} "
+      partner: 
+        user: 
+          recruited: 
+            name: "{{user_name}} a gagné {{capital}}{{currency_short_name}} pour avoir recruté {{other_user_name}} sur {{government_name}} via {{partner_url}} "
+            nouser: "Gagné {{capital}}{{currency_short_name}} pour avoir recruté {{other_user_name}} sur {{government_name}} via {{partner_url}} "
+      point: 
+        helpful: 
+          deleted: 
+            name: "{{user_name}} a perdu {{capital}}{{currency_short_name}} pour avoir supprimé {{point_name}} car d'autres trouvaient cela utile"
+            nouser: "Perdu {{capital}}{{currency_short_name}} pour avoir supprimé {{point_name}} car d'autres trouvaient cela utile"
+          endorsers: 
+            name: "{{user_name}} a gagné {{capital}}{{currency_short_name}} car d'autres partisans ont trouvé {{point_name}} utile"
+            nouser: "Gagné {{capital}}{{currency_short_name}} car d'autres partisans ont trouvé {{point_name}} utile"
+          everyone: 
+            name: "{{user_name}} a gagné {{capital}}{{currency_short_name}} car tant des partisans que des opposants ont trouvé {{point_name}} utile"
+            nouser: "Gagné {{capital}}{{currency_short_name}} car tant des partisans que des opposants ont trouvé {{point_name}} utile"
+          opposers: 
+            name: "{{user_name}} a gagné {{capital}}{{currency_short_name}} car des opposants ont trouvé {{point_name}} utile"
+            nouser: "Gagné {{capital}}{{currency_short_name}} car des opposants ont trouvé {{point_name}} utile"
+          undeclareds: 
+            name: "{{user_name}} a gagné {{capital}}{{currency_short_name}} car des personnes neutres ont trouvé {{point_name}} utile"
+            nouser: "Gagné {{capital}}{{currency_short_name}} car des personnes neutres ont trouvé {{point_name}} utile"
+        unhelpful: 
+          endorsers: 
+            name: "{{user_name}} a perdu {{capital}}{{currency_short_name}} car des partisans ont trouvé {{point_name}} inutile"
+            nouser: "Perdu {{capital}}{{currency_short_name}} car des partisans ont trouvé {{point_name}} inutile"
+          everyone: 
+            name: "{{user_name}} a perdu {{capital}}{{currency_short_name}} car tant des partisans que des opposants ont trouvé {{point_name}} inutile"
+            nouser: "Perdu {{capital}}{{currency_short_name}} car tant des partisans que des opposants ont trouvé {{point_name}} inutile"
+          opposers: 
+            name: "{{user_name}} a perdu {{capital}}{{currency_short_name}} car des opposants ont trouvé {{point_name}} inutile"
+            nouser: "Perdu {{capital}}{{currency_short_name}} car des opposants ont trouvé {{point_name}} inutile"
+          undeclareds: 
+            name: "{{user_name}} a perdu {{capital}}{{currency_short_name}} car des personnes neutres ont trouvé {{point_name}} inutile"
+            nouser: "Perdu {{capital}}{{currency_short_name}} car des personnes neutres ont trouvé {{point_name}} inutile"
+      twitter: 
+        followers: 
+          earned: 
+            link: 
+              one: "{{user_name}} a gagné {{count}}{{currency_short_name}} pour 1 nouvel abonné sur <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+              other: "{{user_name}} a gagné {{count}}{{currency_short_name}} pour {{count}} nouveaux abonnés sur <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+            name: 
+              one: "{{user_name}} a gagné {{count}}{{currency_short_name}} pour 1 nouvel abonné sur Twitter"
+              other: "{{user_name}} a gagné {{count}}{{currency_short_name}} pour {{count}} nouveaux abonnés sur Twitter"
+            nouser: 
+              one: "Gagné {{count}}{{currency_short_name}} pour 1 nouvel abonné sur <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+              other: "Gagné {{count}}{{currency_short_name}} pour {{count}} nouveaux abonnés sur <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+          lost: 
+            link: 
+              one: "{{user_name}} a perdu {{count}}{{currency_short_name}} pour 1 abonné de moins sur <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+              other: "{{user_name}} a perdu {{count}}{{currency_short_name}} pour {{count}} abonnés de moins sur <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+            name: 
+              one: "{{user_name}} a perdu {{count}}{{currency_short_name}} pour 1 abonné de moins sur Twitter"
+              other: "{{user_name}} a perdu{{count}}{{currency_short_name}} pour {{count}} abonnés de moins sur Twitter"
+            nouser: 
+              one: "Perdu {{count}}{{currency_short_name}} pour 1 abonné de moins sur <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+              other: "Perdu {{count}}{{currency_short_name}} pour {{count}} abonnés de moins sur <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+      user: 
+        recruited: 
+          name: "{{user_name}} a gagné {{capital}}{{currency_short_name}} pour avoir recruté {{other_user_name}} sur {{government_name}} "
+          nouser: "Gagné {{capital}}{{currency_short_name}} pour avoir recruté {{other_user_name}} sur {{government_name}} "
+      warning: 
+        link: "{{user_name}} a perdu {{capital}}{{currency_short_name}} pour avoir violé les <a href='/about/rules'>règles du site</a> "
+        name: "{{user_name}} a perdu {{capital}}{{currency_short_name}} pour avoir violé les règles du site"
+        nouser: "Perdu {{capital}}{{currency_short_name}} pour avoir violé les règles du site"
+    comment: 
+      participant: 
+        name: 
+          one: "{{user_name}} a commenté sur {{discussion_name}}"
+          other: "{{user_name}} a laissé {{count}} commentaires sur {{discussion_name}}"
+        nouser: 
+          one: "Commenté sur {{discussion_name}}"
+          other: "Laissé {{count}} commentaires sur {{discussion_name}}"
     discussion: 
       following: 
+        delete: 
+          name: "{{user_name}} a arrêté de suivre la discussion sur {{discussion_name}} "
+          nouser: "Arrêté de suivre la discussion sur {{discussion_name}} "
         new: 
+          name: "{{user_name}} suit la discussion sur {{discussion_name}} "
           nouser: "Suit la discussion {{discussion_name}} "
     endorsement: 
+      delete: 
+        name: "{{user_name}} ne soutient plus {{priority_name}} "
+        noself: "{{user_name}} ne soutient plus"
+        nouser: "Arrêté de soutenir {{priority_name}} "
+      flipped: 
+        implicit: 
+          name: "{{user_name}} soutient à présent {{new_priority_name}} car il a obtenu les opposants de {{priority_name}} "
+          nouser: "Soutient à présent {{new_priority_name}} car il a obtenu les opposants de {{priority_name}} "
+        name: "{{user_name}} soutient {{new_priority_name}} au lieu de s'opposer à {{priority_name}} "
+        nouser: "Soutient {{new_priority_name}} au lieu de s'opposer à {{priority_name}} "
+      new: 
+        ad: 
+          link: 
+            known: "{{user_name}} soutient {{priority_name}} en priorité #{{position}} grâce à <a href='{{ad_url}}'>la publicité de {{ad_user}}</a> "
+            unknown: "{{user_name}} soutient {{priority_name}} grâce à <a href='{{ad_url}}'>la publicité de {{ad_user}}</a> "
+          name: 
+            known: "{{user_name}} soutient {{priority_name}} en priorité #{{position}} grâce à la publicité de {{ad_user}} "
+            unknown: "{{user_name}} soutient {{priority_name}} grâce à la publicité de {{ad_user}}"
+          noself: 
+            known: "{{user_name}} soutient en priorité #{{position}} grâce à <a href='{{ad_url}}'>publicité de {{ad_user}}</a>  "
+            unknown: "{{user_name}} soutient grâce à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
+          nouser: 
+            known: "Soutient {{priority_name}} en priorité #{{position}} grâce à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a>  "
+            unknown: "Soutient {{priority_name}} grâce à la  <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
+        name: 
+          known: "{{user_name}} soutient {{priority_name}} en priorité #{{position}} "
+          unknown: "{{user_name}} soutient {{priority_name}} "
+        noself: 
+          known: "{{user_name}} soutient en priorité #{{position}} "
+          unknown: "{{user_name}} soutient"
+        nouser: 
+          known: "Soutient {{priority_name}} en priorité #{{position}} "
+          unknown: "Soutient {{priority_name}} "
       replaced: 
+        implicit: 
+          name: "{{user_name}} soutient à présent {{new_priority_name}} suite à l'acquisition de {{priority_name}}"
+          nouser: "Soutient à présent {{new_priority_name}} suite à l'acquisition de {{priority_name}}"
+        name: "{{user_name}} soutient {{new_priority_name}} au lieu de {{priority_name}} "
         noself: "{{user_name}} préfère soutenir {{new_priority_name}}\n"
         nouser: "Soutient {{new_priority_name}} au lieu de {{priority_name}}\n"
     following: 
@@ -64,6 +245,7 @@ fr:
         nouser: "A arreté de suivre {{other_user_name}}"
       new: 
         name: "{{user_name}} suit {{other_user_name}}"
+        nouser: "Suit {{other_user_name}} "
     ignoring: 
       delete: 
         name: "{{user_nam}} n'ignore plus quelqu'un"
@@ -72,8 +254,60 @@ fr:
     invitation: 
       accepted: 
         name: 
+          known: "{{user_name}} a accepté une invitation de {{other_user_name}} à rejoindre {{government_name}} "
           unknown: "{{user_name}} a accepté une invitation à rejoindre {{government_name}}"
+        nouser: 
+          known: "Accepté une invitation de {{other_user_name}} à rejoindre {{government_name}} "
+          unknown: "Accepté an invitation à rejoindre {{government_name}} "
+      new: 
+        name: 
+          known: "{{user_name}} a invité quelqu'un"
+          unknown: "Quelqu'un a envoyé une invitation "
+        nouser: "Invité quelqu'un "
+    opposition: 
+      delete: 
+        name: "{{user_name}} ne s'oppose plus à {{priority_name}} "
+        noself: "{{user_name}} ne s'oppose plus "
+        nouser: "Ne s'oppose plus à {{priority_name}} "
+      flipped: 
+        implicit: 
+          name: "{{user_name}} s'oppose à présent à {{new_priority_name}} suite à l'acquisition des opposants à {{priority_name}} "
+          nouser: "S'oppose à présent à {{new_priority_name}} suite à l'acquisition des opposants à {{priority_name}} "
+        name: "{{user_name}} s'oppose à {{new_priority_name}} au lieu de s'opposer à {{priority_name}} "
+        nouser: "S'oppose à {{new_priority_name}} au lieu de s'opposer à {{priority_name}} "
+      new: 
+        ad: 
+          link: 
+            known: "{{user_name}} s'oppose à {{priority_name}} en priorité #{{position}} suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
+            unknown: "{{user_name}} s'oppose à {{priority_name}} suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
+          name: 
+            known: "{{user_name}} s'oppose à {{priority_name}} en priorité #{{position}} suite à la publicité de {{ad_user}}"
+            unknown: "{{user_name}} s'oppose à {{priority_name}} suite à la publicité de {{ad_user}}"
+          noself: 
+            known: "{{user_name}} s'oppose en priorité #{{position}} suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
+            unknown: "{{user_name}} s'oppose suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
+          nouser: 
+            known: "Opposé à {{priority_name}} en priorité #{{position}} suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
+            unknown: "Opposé à {{priority_name}} suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
+        name: 
+          known: "{{user_name}} s'oppose à {{priority_name}} en priorité #{{position}} "
+          unknown: "{{user_name}} s'oppose à {{priority_name}} "
+        noself: 
+          known: "{{user_name}} s'oppose en priorité #{{position}} "
+          unknown: "{{user_name}} s'oppose"
+        nouser: 
+          known: "Opposé à {{priority_name}} en priorité #{{position}} "
+          unknown: "Opposé à {{priority_name}} "
+      replaced: 
+        implicit: 
+          name: "{{user_name}} s'oppose à présent à {{new_priority_name}} suite à l'acquisition de {{priority_name}} "
+          nouser: "Opposé à présent à {{new_priority_name}} suite à l'acquisition de {{priority_name}} "
+        name: "{{user_name}} s'oppose à {{new_priority_name}} au lieu de {{priority_name}} "
+        noself: "{{user_name}} s'oppose à {{new_priority_name}} à la place"
+        nouser: "Opposé à {{new_priority_name}} au lieu de {{priority_name}} "
     partner: 
+      new: 
+        name: "{{partner_name}} est à présent partenaire"
       picture: 
         new: 
           name: "{{partner_name}} a un nouveau logo\n"
@@ -81,6 +315,16 @@ fr:
       deleted: 
         name: "{{user_name}} a effacé {{point_name}}\n"
         nouser: "{{point_name}} effacé"
+      helpful: 
+        delete: 
+          name: "{{user_name}} ne trouve plus {{point_name}} utile"
+          nouser: "Ne trouve plus {{point_name}} utile"
+        name: "{{user_name}} a marqué {{point_name}} comme utile"
+        nouser: "Marqué {{point_name}} comme utile"
+      new: 
+        name: "{{user_name}} a ajouté {{point_name}} à {{priority_name}} "
+        noself: "Ajouté {{point_name}} à cette priorité"
+        nouser: "Ajouté  {{point_name}} à {{priority_name}} "
     priority: 
       comment: 
         new: 
@@ -98,11 +342,21 @@ fr:
     impersonate: "Vous êtes connecté(e) en tant {{user_name}}"
     logo: "Changer le logo de {{government_name}}"
   ads: 
+    new: 
+      submit: "Enregistrer et publier votre publicité"
     per_member: "par membre"
+    show: 
+      title: "Publicités pour {{priority_name}} "
     shown_to: "Montré à/sur"
     your_message: "Votre message ici"
   application: 
     fb_session_expired: "Votre session Facebook a expiré"
+  blurbs: 
+    new: 
+      submit: "Enregistrer le texte de présentation personnalisé"
+  branch_endorsements: 
+    top: 
+      title: "Priorités principales dans {{branch_name}}"
   branches: 
     default: 
       priorities: 
@@ -114,6 +368,7 @@ fr:
     new: 
       name: 
         label: Nom
+      submit: "Enregistrer la branche"
   briefing: 
     search: 
       empty: "Pas de résultats"
@@ -121,11 +376,16 @@ fr:
     new: 
       discussion: "Démarrer une discussion"
       document: "Démarrer une discussion à propos de ce document"
+      submit: "Publier un bulletin"
   cancel: Annuler
   changes: 
     approved: APPROUVÉ
     insta_approve: 
       name: "Approuver sans voter"
+    new: 
+      submit: "Proposer cette acquisition"
+    show: 
+      title: "Proposition d'acquisition de {{priority_name}} "
   color_schemes: 
     new: 
       buttons: 
@@ -144,10 +404,21 @@ fr:
         links: Liens
         name: Page
         subheadings: "En-tête secondaire"
+      submit: "Enregistrer le thème de couleurs"
       text: Texte
       toolbar: 
         color: Couleur
         name: "Barre d'outils"
+  comments: 
+    new: 
+      submit: "Publier le commentaire"
+  contacts: 
+    members: 
+      submit: "Ajouter les membres sélectionnés à votre réseau"
+    new: 
+      submit: "Envoyer l'invitation par courriel"
+    not_invited: 
+      submit: "Inviter les personnes sélectionnées à rejoindre {{government_name}} "
   datetime: 
     distance_in_words: 
       half_a_minute: "demi minute"
@@ -172,21 +443,27 @@ fr:
       success: "Merci pour votre contribution concernant '{{document_name}}'"
     newest: 
       title: "Nouveaux documents"
+    no_revisions: "Aucun document n'a été revu récemment"
     revision: 
       new: 
         submit: "Enregistrer le document"
+      show: 
+        title: "{document_name}} - mis à jour par {{user_name}} "
     title: Documents
     yours: 
       title: "Vos documents"
   doit: OUI
   dont: NON
+  email_templates: 
+    new: 
+      submit: "Enregistrer le courrier personnalisé"
   endorse: 
     capitalize: Soutenir
     delete: 
       title: "Retirer de la liste de mes priorités"
-    ed: soutenues
+    ed: pour
     ing: Soutien
-    name: soutien
+    name: soutenir
     people: Partisans
     plural: soutiens
     title: "Je soutiens cette priorité, l'ajouter à ma liste"
@@ -206,6 +483,11 @@ fr:
       success: "{{number}} amis Facebook invités"
   feeds: 
     rss: "Flux RSS"
+  government: 
+    settings: 
+      apis: 
+        submit: "Enregistrer les paramètres d'API"
+      submit: "Enregistrer les paramètres de nation"
   ignore: 
     capitalize: Ignorer
     delete: 
@@ -220,7 +502,7 @@ fr:
       sent: "Envoyé :"
   install: 
     admin_user: 
-      submit: "Sauvegarder votre compte"
+      submit: "Enregistrer votre compte"
   menu: 
     about: 
       faq: FAQ
@@ -287,8 +569,17 @@ fr:
           one: "Rencontrer le contributeur"
           other: "Rencontrer les {{count}} contributeurs "
         documents_needed: "Priorités ayant besoin de documents"
+      revisions: 
+        name: révisions
+        one: "1 révision"
+        other: "{{count}} révisions"
       your_priorities: "Vos priorités"
       yours: "Vos priorités"
+    charts: 
+      active_issues: "{{tags_name}} les plus actifs"
+      falling: "Agendas en baisse"
+      name: "Graphiques et statistiques"
+      rising: "Agendas en hausse"
     color_schemes: 
       advanced: Avancé
     contacts: 
@@ -333,18 +624,27 @@ fr:
       warnings: Avertissements
       yours: "Votre réseau"
     news: 
+      acquisitions: "Fusions et acquisitions"
+      activity: "Toutes les activités"
+      all: Tout
+      all_activity: "Toutes les activités"
+      created: "Priorités créées par vous"
       discussions: Discussions
       everyone: "Tout le monde"
       everything: Tout
       followers: Abonnés
+      manda: "Fusions et acquisitions"
       name: Nouvelles
       network: Réseau
       official_user_activity: "Activité de {{official_user_name}}"
       proposals: Propositions
+      voting: "Résultats de vote"
+      what: "Que se passe-t-il ?"
       your_activity: "Votre activité"
       your_followers: "Vos abonnés"
       your_network: "Votre réseau"
       your_priorities: "Vos priorités"
+      yours: Vous
     next_steps: 
       bio: "Ajouter votre biographie"
       facebook_friends: "Inviter vos amis Facebook"
@@ -427,11 +727,18 @@ fr:
       picture: Image
     widgets: 
       discussions: 
+        name: "Widgets de discussion"
         short: Discussions
+      name: "Widgets pour votre site"
       points: 
+        name: "Widgets de sujets de discussion"
         short: "Sujets de discussion"
       priorities: 
+        name: "Widgets de priorités"
         short: Priorités
+  messages: 
+    new: 
+      submit: "Envoyer le message privé"
   meta: 
     rss: 
       priorities: "Top 25 des priorités de {{government_name}} "
@@ -439,6 +746,112 @@ fr:
     talkative: 
       title: "Les plus bavards sur {{government_name}} "
   new: nouveau
+  oppose: 
+    capitalize: Rejeter
+    delete: 
+      title: "Retirer de la liste de mes priorités"
+    ed: contre
+    ing: Rejet
+    name: s'opposer
+    people: Opposants
+    plural: rejets
+    title: "Je m'y oppose, et voudrais ajouter mon opposition à ma liste de priorités"
+    you: "VOUS REJETEZ"
+  oppositions: 
+    name: 
+      one: "1 rejet"
+      other: "{{count}} rejets"
+  or: OU
+  pages: 
+    destroy: "{{page_name}} supprimée"
+    edit: 
+      submit: "Enregistrer les informations de partenariat"
+      tite: "Modifier une page "
+    errors: 
+      header_message: "Erreur à l'enregistrement de la page"
+    index: "Toutes les pages"
+    new: 
+      link_name: 
+        label: "Nom du lien"
+      name: 
+        label: Nom
+      short_name: 
+        label: "URL (sans espaces)"
+      submit: "Enregistrer la page"
+      title: "Créer une nouvelle page"
+    saved: "{{page_name}} enregistrée"
+  partners: 
+    edit: 
+      submit: "Enregistrer les paramètres de partenariat"
+    email: 
+      intro: "L'activation de cette fonction ajoutera une case à cocher à tous les formulaires d'enregistrement sur http://{{partner_short_name}}.{{base_url}}/ pour que les visiteurs acceptent de s'inscrire à votre liste de diffusion (opt-in). Elle sera cochée par défaut. "
+      is_optin: 
+        label: "Demander à tous les nouveaux membres la permission d'être ajoutés à votre liste de diffusion."
+      optin_text: 
+        label: "Que doit dire le texte d'acceptation (opt-in) ?"
+      privacy_url: 
+        label: "URL de votre politique de confidentialité"
+      submit: "Mise à jour de la liste de diffusion"
+      subscribe_url: 
+        label: "URL où l'on peut s'inscrire"
+      unsubscribe_url: 
+        label: "URL où l'on peut se <i>dés</i>inscrire"
+    intro: "Votre groupe ou organisation peut rejoindre notre réseau également. <a href='/partners'>Plus de détails ici</a>. "
+    new: 
+      is_daily_summary: 
+        label: "Envoyez-moi un relevé d'activité hebdomadaire par courriel"
+      name: 
+        example: "(exemple : Donate Life America) "
+        label: "Titre ou nom d'organisation"
+      short_name: 
+        limit: "Moins de 20 caractères"
+      submit: "Devenir partenaire"
+      success: "Merci de collaborer avec nous !"
+      title: "Partenariat avec {{government_name}} "
+      website: 
+        example: "(exemple : http://donatelife.net/) "
+        label: "Lien vers votre page d'accueil"
+    picture: 
+      title: "Envoyer un logo de partenaire"
+    privacy_policy: "Politique de confidentialité"
+    settings: 
+      emails: "Paramètres de listes de diffusion"
+      success: "Paramètres enregistrés"
+      title: "Paramètres de partenariat"
+  passwords: 
+    change: 
+      facebook: "Votre mot de passe est le même que votre mot de passe sur Facebook, vous devez donc le modifier sur Facebook."
+      nomatch: "La confirmation du mot de passe ne correspond pas"
+      submit: "Modifier le mot de passe"
+      success: "Mot de passe modifié"
+      title: "Modifier votre mot de passe {{government_name}}"
+    new: 
+      confirm: 
+        label: "Répétez le nouveau mot de passe"
+      current: 
+        label: "Mot de passe actuel"
+      email: 
+        label: "Votre adresse courriel"
+      facebook: "Votre mot de passe est géré par Facebook, pas sur {{government_name}}. Cliquez sur le bouton Facebook pour vous connecter."
+      nevermind: "En fait non, je m'en souviens maintenant"
+      new: 
+        label: "Nouveau mot de passe"
+      sent: "Un mot de passe temporaire a été envoyé à {{email}}"
+      submit: "Demander un nouveau mot de passe"
+      title: "Réinitialiser votre mot de passe {{government_name}}"
+  pc: 
+    html: "<span class='pc'>{{capital}}{{currency_short_name}}</span>"
+  pictures: 
+    submit: "Envoyer et enregistrer votre photo"
+  points: 
+    edit: 
+      name: Modifier
+      title: "Pouvez-vous rendre ce sujet de discussion plus convainquant ? N'hésitez pas à le modifier !"
+    new: 
+      submit: "Enregistrer le sujet de discussion"
+    revision: 
+      show: 
+        title: "mise à jour de {{point_name}} par {{user_name}} "
   priorities: 
     ads: 
       title: "Publicités en cours sur {{government_name}}"
@@ -451,6 +864,8 @@ fr:
       success: "{{priority_name}} enregistrée"
       title: "Modification de {{priority_name}} "
     name: priorités
+    new: 
+      submit: "Créer une priorité"
     newest: 
       name: "Nouvelles priorités"
     position: 
@@ -490,48 +905,297 @@ fr:
           short: 
             one: "gagne une place cette semaine"
             other: "gagne {{count}} places cette semaine"
+    top: 
+      title: "Priorités principales pour {{target}} "
     yours: 
+      heading: "Priorités de {{user_name}}"
       name: "Vos priorités"
+      outro: "Vous pouvez également suivre toutes les <a href='/news/your_priority_activities'>activités</a> et <a href='/news/your_priority_discussions'>discussions</a> concernant vos priorités. "
+      prompt: "Ajouter une priorité à votre liste"
+      title: "Vos priorités sur {{government_name}} "
+    yours_lowest: 
+      title: "Vos priorités les moins appréciées des membres de {{government_name}}"
+    yours_top: 
+      title: "Vos priorités les mieux classées par les membres de{{government_name}}"
   prioritizer: 
+    duel: 
+      question: "Quelle est la priorité la plus importante ."
+      same: "C'est à peu près pareil"
     endorse: 
       moved: 
         msg: "Priorité {{priority_name}} montée en position #{{position}} "
       msg: "Ajouté la priorité {{priority_name}} en position #{{position}} "
+  processing: Traitement…
+  profiles: 
+    new: 
+      submit: "Enregistrer votre biographie"
   rank: Position
+  revisions: 
+    activity: 
+      name: "Activité sur cette révision"
+    added: "ajouté {{time_ago}} "
+    byline: "par {{author_sentence}} "
+    errors: 
+      processing: "Normalement vous devriez voir les modifications effectués, mais une erreur de traitement s'est produite. Veuillez consulter la <a href='{{clean_url}}'>version propre</a> "
+    name: 
+      one: "1 révision"
+      other: "{{count}} révisions"
+    revised: "revu {{time_ago}} "
+    title: Révisions
+    user: "Révision de {{user_name}}"
+    word_count: 
+      one: "1 mot"
+      other: "{{count}} mots"
   rss: 
     your_comments: "Derniers commentaires dans les discussions de {{user_name}}"
     your_notifications: "Notifications pour {{user_name}} à {{government_name}} "
+  searches: 
+    member: 
+      submit: "Rechercher un membre"
+    new: 
+      submit: Rechercher
   sessions: 
     new: 
+      email: 
+        label: "Adresse courriel"
+      forgot: "J'ai oublié mon mot de passe"
       intro: "<b><a href='{{signup_url}}'>S'enregistrer</a></b> ou <a href='#' id='login_link'>Se connecter à  {{government_name}}</a>. "
       login: 
         facebook: Facebook
+        options: "ou <b>connectez-vous instantanément</b> avec : "
+        or: ou
         twitter: Twitter
       password: 
         label: "Mot de passe"
       submit: Connexion
+      title: "Veuillez vous connecter"
+    please_login: "Veuillez d'abord vous connecter"
+    signup: 
+      name: "J'ai besoin d'un compte {{government_name}}"
+  settings: 
+    connect: "Connexion avec des réseaux sociaux"
+    delete: 
+      name: "Supprimer votre compte"
+      submit: "Je comprends, supprimer mon compte maintenant"
+      title: "Supprimer votre compte {{government_name}}"
+    destroy: "Votre compte a été supprimé. À bientôt !"
+    edit: 
+      address: 
+        label: Adresse
+      birth_date: 
+        label: "Date de naissance"
+      branch: 
+        label: "Dans quel groupe vous sentez-vous le mieux ?"
+      city: 
+        label: Ville
+      email: 
+        example: "(jamais partagée sans votre permission)"
+        label: "Adresse de courriel"
+      first_name: 
+        example: "(ne sera pas affiché sur le site)"
+        label: Prénom
+      is_mergeable: 
+        label: "Fusionner vos priorités avec d'autres qui ont la même signification"
+      is_newsletter_subscribed: 
+        label: "Envoyer un rapport hebdomadaire par courriel sur vos priorités"
+      last_name: 
+        label: "et nom de famille"
+      login: 
+        example: "(peut être votre nom ou un pseudonyme)"
+        label: "Comment serez-vous identifié(e) sur le site ?"
+      other_sites: 
+        label: "Vos identifiants sur d'autre sites"
+      state: 
+        label: Région/province
+      submit: "Enregistrer vos paramètres"
+      website: 
+        label: "Site web"
+      zip: 
+        label: "Code postal"
+    index: 
+      title: "Vos paramètres sur {{government_name}}"
+    legislators: 
+      error: "Erreur à l'enregistrement de votre adresse"
+      submit: "Rechercher des législateurs"
+    optional: Optionnel
+    picture: 
+      title: "Votre photo"
+      upload: "Envoyer votre photo"
+    required: Requis
+    saved: "Vos paramètres ont été enregistrés"
+    twitter_connected: "Votre compte Twitter est maintenant lié"
   signups: 
     also_rss: "Vous pouvez également suivre toutes vos notifications dans un {{rss_url}} "
+    edit: 
+      submit: "Enregistrer les paramètres de courriel"
+  skip: 
+    ing: Passé
+    name: Passer
+  splash: 
+    enter: "Entrer sur le site"
+    index: 
+      title: "Regarder ce que les gens font sur {{government_name}} "
+  status: 
+    compromised: compromis
+    failed: échoué
+    intheworks: "en cours"
+    successful: réussi
+    unknown: inconnu
+  support: 
+    array: 
+      last_word_connector: et
+      sentence_connector: et
+      two_words_connector: et
+      words_connector: ","
+    select: 
+      prompt: "Veuillez sélectionner"
+  tags: 
+    edit: 
+      description: 
+        label: Description
+      name: 
+        label: Nom
+        unchangeable: "Nom : {{tag_name}}"
+      prompt: 
+        label: Demander
+      title: "Modification de {{tag_name}}"
+    new: 
+      submit: "Enregistrer {{tags_name}} "
+    show: 
+      title: "Priorités liées à {{tag_name}}"
   time: 
     mo: mois
     month: Mois
     week: Semaine
     wk: sem
+  unsubscribe: 
+    new: 
+      submit: "Mettre à jour les notifications de courriel"
   users: 
+    documents: 
+      title: "Documents de {{user_name}} sur {{government_name}} "
+    edit: 
+      saved: "Paramètres de {{user_name}} enregistrés"
+      submit: "Enregistrer les paramètres"
+      title: "Modification des paramètres de  {{user_name}}"
+    empty: "{{user_name}} n'a encore aucune priorité."
+    errors: 
+      need_email: "Vous devez fournir votre adresse courriel"
+      need_zip: "Vous devez fournir votre code postal"
+    followers: 
+      name: 
+        one: "1 abonné"
+        other: "{{count}} abonnés"
+      title: 
+        one: "1 personne suit {{user_name}}"
+        other: "{{count}} personnes suivent {{user_name}}"
+    following: 
+      empty: "Vous ne suivez personne pour l'instant."
+      intro: "Ce sont les personnes que vous suivez, classées selon leur influence sur le site.<br/>Vous pouvez également <a href='/news/your_network_activities'>suivre leurs mises à jour dans les actualités</a>, ou <a href='/priorities/network'>voir une liste de toutes leurs priorités</a>. "
+      title: 
+        one: "{{user_name}} suit 1 personne"
+        other: "{{user_name}} suit {{count}} personnes"
+    ignorers: 
+      title: 
+        one: "1 personne ignore {{user_name}}"
+        other: "{{count}} personnes ignorent {{user_name}}"
+    ignoring: 
+      title: 
+        one: "{{user_name}} ignore 1 personne"
+        other: "{{user_name}} ignore {{count}} personnes"
+    influential: 
+      name: "{{position}}e personne la plus influente"
+    invited: 
+      name: 
+        one: "Invité 1 personne"
+        other: "Invité {{count}} personnes"
+    issues: 
+      title: "{{tags_name}} où est impliqué {{user_name}}"
+    joined: "Inscrit il y a {{time_ago}} "
+    last_visit: "Dernière visite il y a {{time_ago}} "
+    legislators: 
+      title: "Législateurs pour {{user_name}} "
+    make_admin: "{{user_name}}  est à présent Administrateur"
+    missing: "Impossible de trouver ce membre"
+    new: 
+      error_message: "Un problème est survenu lors de la création de votre compte"
+      facebook_outro: "ou si vous n'avez pas de compte Facebook, remplissez simplement ce formulaire :"
+      login: "<b>Vous avez déjà un compte ?</b> "
+      password: 
+        confirm: "et saisissez-le à nouveau"
+        label: "Mot de passe"
+      submit: "Rejoindre le réseau"
+      submit_and_endorse: "Soutenir et rejoindre"
+      submit_and_oppose: "S'opposer et rejoindre"
+      success: "Bienvenue sur {{government_name}} "
+      validation: 
+        login: "Veuillez indiquer un nom sous lequel vous identifier sur le site ."
+    not_activated: 
+      heading: "Veuillez vérifier votre compte"
+    points: 
+      title: "Sujets de discussion de {{user_name}} sur {{government_name}} "
+    priorities: 
+      title: "Priorités de {{user_name}} sur {{government_name}} "
+      top5: 
+        more: "Top 5 parmi {{priority_count}} priorités"
+        one: "Première priorité"
+        other: "{{count}} premières priorités"
+    recruited: 
+      name: 
+        one: "Recruté 1 membre"
+        other: "Recruté {{count}} membres"
+    reinstated: "{{user_name}} a été réactivé"
+    show: 
+      title: "{{user_name}} sur {{government_name}} "
     signups: 
       also_rss: "{{rss_url}} des notifications de {{user_name}}"
+      title: "Notifications par courriel pour {{user_name}} "
     suspended: "{{user_name}} est bloqué"
+    twitter_count: 
+      one: "1 abonné sur <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+      other: "{{count}} abonnés sur <a href='http://twitter.com/{{twitter_login}}'>Twitter</a>"
+  vote: 
+    already_voted_now: "Vous avez déjà voté NON pour cette acquisition. Votre position reste inchangée. "
+    already_voted_yes: "Vous avez déjà voté oui pour cette acquisition. Votre position a été transférée vers {{priority_name}} "
+    approve: "Votre position a été transférée vers {{priority_name}} "
+    decline: "Votre position restera inchangée."
+    error: "Impossible de trouver ce vote. Veuillez vérifier que votre lien est correct et n'a pas été tronqué par votre programme de messagerie."
+    implicit_approved: "Le vote est clôturé, la proposition est acceptée et votre position a été transférée vers cette priorité"
+    implicit_declined: "Le vote est clôturé, la proposition a été rejetée, votre position reste inchangée sur cette priorité."
+    inactive: "Période de vote expirée"
   votes: 
     new: 
       approve: 
         endorser: "OUI, je soutiens"
         opposer: "OUI, je m'oppose"
+      cantvote: "Si cette proposition obtient au moins 70% des votes, tous ceux qui n'ont pas votés seront transférés vers {{priority_name}}. Si la majorité absolue de 70% n'est pas atteinte, rien ne se passera."
       decline: 
         endorser: "NON, je continue à soutenir"
         opposer: "NON, je continue à m'opposer"
+      dontvote: "Si vous ne votez pas avant {{time_left}} et que la proposition obtient au moins 70% des votes, l'acquisition sera acceptée et votre position sera transférée vers {{priority_name}}. Si la majorité absolue de 70% n'est pas atteinte, votre position restera inchangée."
+      novote: "Seules les personnes qui soutenaient ou s'opposaient à cette priorité avant le vote peuvent participer."
       success: Voté
     show: 
       approved: "Vous avez voté oui."
+      declined: 
+        endorser: "Vous avez voté non, votre soutien restera inchangé."
+        opposer: "Vous avez voté non, votre opposition restera inchangée."
+  warnings: 
+    name: 
+      one: "1 avertissement"
+      other: "{{count}} avertissements"
   widgets: 
+    discussions: 
+      title: "Afficher les discussions de {{government_name}} sur votre site"
     index: 
       title: "Widgets pour votre blog ou site web"
+    new: 
+      code: 
+        label: "Copiez et collez ce code dans les sources HTML de votre site"
+      submit: "Mettre à jour le code"
+    points: 
+      title: "Afficher les sujets de discussion de {{government_name}} sur votre site"
+    preview: 
+      label: "Voici à quoi cela ressemblera, mais avec les polices et couleurs de votre site :"
+    priorities: 
+      title: "Afficher les priorités de {{government_name}} sur votre site"

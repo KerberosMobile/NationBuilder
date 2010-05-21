@@ -1090,12 +1090,17 @@ nl:
       site: "Over deze site"
     admin: 
       apis: "API sleutels"
+      blurbs: Blurbs
+      branches: Groepen
+      buddy_icon: "Buddy Icon"
       colors: Kleuren
       emails: E-mails
       fav_icon: "Fav Icon"
       government: 
+        edit: "Natie info"
         name: Settings
       logo: Logo
+      pages: Pagina's
     branches: 
       current: "Bestaande groepen"
       new: "Voeg een groep toe"
@@ -1103,11 +1108,15 @@ nl:
       add_document: 
         name: "Voeg een document toe"
         title: "Documenten maken het mogelijk om uit te wijden over je ideeën en er met anderen aan te werken"
+      add_point: 
+        name: "Voeg een standpunt toe"
+        title: "Kan je een overtuigend argument voor of tegen deze prioriteit schrijven in minder dan 500 tekens?"
       all: Alle
       all_activity: "Alle activiteit"
       all_documents: "Alle documenten"
+      all_points: "Alle standpunten"
       delete: 
-        confirm: "Ben je zeker dat je dit wil verwijderen?"
+        confirm: "Ben je zeker dat je dit wilt verwijderen?"
         name: Verwijder
       discussions: 
         name: Gesprekken
