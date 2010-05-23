@@ -212,25 +212,25 @@ fr:
       new: 
         ad: 
           link: 
-            known: "{{user_name}} soutient {{priority_name}} en priorité #{{position}} grâce à <a href='{{ad_url}}'>la publicité de {{ad_user}}</a> "
+            known: "{{user_name}} soutient {{priority_name}} en priorité n°{{position}} grâce à <a href='{{ad_url}}'>la publicité de {{ad_user}}</a> "
             unknown: "{{user_name}} soutient {{priority_name}} grâce à <a href='{{ad_url}}'>la publicité de {{ad_user}}</a> "
           name: 
-            known: "{{user_name}} soutient {{priority_name}} en priorité #{{position}} grâce à la publicité de {{ad_user}} "
+            known: "{{user_name}} soutient {{priority_name}} en priorité n°{{position}} grâce à la publicité de {{ad_user}} "
             unknown: "{{user_name}} soutient {{priority_name}} grâce à la publicité de {{ad_user}}"
           noself: 
-            known: "{{user_name}} soutient en priorité #{{position}} grâce à <a href='{{ad_url}}'>publicité de {{ad_user}}</a>  "
+            known: "{{user_name}} soutient en priorité n°{{position}} grâce à <a href='{{ad_url}}'>publicité de {{ad_user}}</a>  "
             unknown: "{{user_name}} soutient grâce à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
           nouser: 
-            known: "Soutient {{priority_name}} en priorité #{{position}} grâce à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a>  "
+            known: "Soutient {{priority_name}} en priorité n°{{position}} grâce à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a>  "
             unknown: "Soutient {{priority_name}} grâce à la  <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
         name: 
-          known: "{{user_name}} soutient {{priority_name}} en priorité #{{position}} "
+          known: "{{user_name}} soutient {{priority_name}} en priorité n°{{position}} "
           unknown: "{{user_name}} soutient {{priority_name}} "
         noself: 
-          known: "{{user_name}} soutient en priorité #{{position}} "
+          known: "{{user_name}} soutient en priorité n°{{position}} "
           unknown: "{{user_name}} soutient"
         nouser: 
-          known: "Soutient {{priority_name}} en priorité #{{position}} "
+          known: "Soutient {{priority_name}} en priorité n°{{position}} "
           unknown: "Soutient {{priority_name}} "
       replaced: 
         implicit: 
@@ -278,25 +278,25 @@ fr:
       new: 
         ad: 
           link: 
-            known: "{{user_name}} s'oppose à {{priority_name}} en priorité #{{position}} suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
+            known: "{{user_name}} s'oppose à {{priority_name}} en priorité n°{{position}} suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
             unknown: "{{user_name}} s'oppose à {{priority_name}} suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
           name: 
-            known: "{{user_name}} s'oppose à {{priority_name}} en priorité #{{position}} suite à la publicité de {{ad_user}}"
+            known: "{{user_name}} s'oppose à {{priority_name}} en priorité n°{{position}} suite à la publicité de {{ad_user}}"
             unknown: "{{user_name}} s'oppose à {{priority_name}} suite à la publicité de {{ad_user}}"
           noself: 
-            known: "{{user_name}} s'oppose en priorité #{{position}} suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
+            known: "{{user_name}} s'oppose en priorité n°{{position}} suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
             unknown: "{{user_name}} s'oppose suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
           nouser: 
-            known: "Opposé à {{priority_name}} en priorité #{{position}} suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
+            known: "Opposé à {{priority_name}} en priorité n°{{position}} suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
             unknown: "Opposé à {{priority_name}} suite à la <a href='{{ad_url}}'>publicité de {{ad_user}}</a> "
         name: 
-          known: "{{user_name}} s'oppose à {{priority_name}} en priorité #{{position}} "
+          known: "{{user_name}} s'oppose à {{priority_name}} en priorité n°{{position}} "
           unknown: "{{user_name}} s'oppose à {{priority_name}} "
         noself: 
-          known: "{{user_name}} s'oppose en priorité #{{position}} "
+          known: "{{user_name}} s'oppose en priorité n°{{position}} "
           unknown: "{{user_name}} s'oppose"
         nouser: 
-          known: "Opposé à {{priority_name}} en priorité #{{position}} "
+          known: "Opposé à {{priority_name}} en priorité n°{{position}} "
           unknown: "Opposé à {{priority_name}} "
       replaced: 
         implicit: 
@@ -387,20 +387,20 @@ fr:
           nouser: "A laissé un commentaire concernant {{priority_name}}"
       debut: 
         name: 
-          known: "{{priority_name}} est entrée dans le classement en position #{{position}} "
+          known: "{{priority_name}} est entrée dans le classement en position n°{{position}} "
           unknown: "{{priority_name}} est entrée dans le classement"
         noself: 
-          known: "Entrée dans le classement en position #{{position}} "
+          known: "Entrée dans le classement en position n°{{position}} "
           unknown: "Entrée dans le classement"
       first: 
         endorsed: 
-          name: "{{priority_name}} est la nouvelle priorité #1 de {{user_name}}"
-          noself: "Ceci est la nouvelle priorité #1 de {{user_name}}"
-          nouser: "Nouvelle priorité #1 : {{priority_name}} "
+          name: "{{priority_name}} est la nouvelle priorité n°1 de {{user_name}}"
+          noself: "Ceci est la nouvelle priorité n°1 de {{user_name}}"
+          nouser: "Nouvelle priorité n°1 : {{priority_name}} "
         opposed: 
-          name: "L'opposition à {{priority_name}} est la nouvelle priorité #1 de {{user_name}}"
-          noself: "L'opposition à ceci est la nouvelle priorité #1 de {{user_name}}"
-          nouser: "Nouvelle priorité #1 : opposition à {{priority_name}} "
+          name: "L'opposition à {{priority_name}} est la nouvelle priorité n°1 de {{user_name}}"
+          noself: "L'opposition à ceci est la nouvelle priorité n°1 de {{user_name}}"
+          nouser: "Nouvelle priorité n°1 : opposition à {{priority_name}} "
       flagged: 
         name: "{{user_name}} a signalé {{priority_name}}"
         noself: "{{user_name}} a signalé cette priorité"
@@ -434,22 +434,22 @@ fr:
           name: "{{priority_name}} est la priorité la plus controversée dans {{tag_name}} "
           noself: "C'est la priorité la plus controversée dans {{tag_name}} "
         first: 
-          name: "{{priority_name}} est la nouvelle priorité #1 dans {{tag_name}} "
-          noself: "C'est la nouvelle priorité #1 dans {{tag_name}}"
+          name: "{{priority_name}} est la nouvelle priorité n°1 dans {{tag_name}} "
+          noself: "C'est la nouvelle priorité n°1 dans {{tag_name}}"
         obama: 
           first: 
-            name: "{{priority_name}} est la nouvelle priorité #1 dans l'agenda  {{tag_name}} de {{official_user_name}}"
-            noself: "C'est la nouvelle priorité #1 dans l'agenda {{tag_name}} de {{official_user_name}}"
+            name: "{{priority_name}} est la nouvelle priorité n°1 dans l'agenda  {{tag_name}} de {{official_user_name}}"
+            noself: "C'est la nouvelle priorité n°1 dans l'agenda {{tag_name}} de {{official_user_name}}"
         rising: 
           name: "{{priority_name}} est la priorité en plus forte progression dans {{tag_name}} "
           noself: "C'est la priorité en plus forte progression dans {{tag_name}} "
     user: 
       debut: 
         name: 
-          known: "{{user_name}} est entré dans le classement des plus influents en position #{{position}} "
+          known: "{{user_name}} est entré dans le classement des plus influents en position n°{{position}} "
           unknown: "{{user_name}} est entré dans le classement des plus influents"
         nouser: 
-          known: "Entré dans le classement des plus influents en position #{{position}} "
+          known: "Entré dans le classement des plus influents en position n°{{position}} "
           unknown: "Entré dans le classement des plus influents"
       new: 
         name: "{{user_name}} a rejoint {{government_name}} "
@@ -499,7 +499,7 @@ fr:
     past: "Publicités précédentes"
     per_member: "par membre"
     show: 
-      current_position: "Cette publicité est actuellement en position #{{position}}. Vous pouvez voir toutes les publicités en cours <a href='{{ads_url}}'>ici</a>. "
+      current_position: "Cette publicité est actuellement en position n°{{position}}. Vous pouvez voir toutes les publicités en cours <a href='{{ads_url}}'>ici</a>. "
       endorsed: 
         one: "1 pour"
         other: "{{count}} pour"
@@ -691,7 +691,7 @@ fr:
       title: "Personnes dont les priorités ont le plus progressé au cours de la semaine"
     issues: 
       label: progression/régression
-      title: "{{tags_name}} les plus actifs sur {{government_name}} "
+      title: "{{tags_name}} les plus actives sur {{government_name}} "
     losers_24hr: 
       intro: "Imaginez que les priorités de chacun sont un portefeuille d'actions comme dans un fonds mutualisé. Cette page est mise à jour à minuit avec les personnes dont les priorités ont le plus régressé au cours des dernières 24 heures."
       title: "Personnes dont les priorités ont le plus régressé au cours des dernières 24 heures."
@@ -705,10 +705,10 @@ fr:
       name: "Graphique de priorités"
       title: "Suit le mouvement de cette priorité dans les classements. Plus le nombre est petit mieux c'est. Les classements sont influencés par le nombre de gens ayant cette priorité dans leur liste et l'importance qu'ils y accordent. "
       total_volume: 
-        title: "Le nombre total de supports/oppositions chaque jour"
+        title: "Le nombre total de soutiens/oppositions chaque jour"
       volume: 
         name: VOLUME
-        title: "En vert le nombre de supports pour cette priorité chaque jour, et en rouge le nombre d'oppositions."
+        title: "En vert le nombre de soutiens pour cette priorité chaque jour, et en rouge le nombre d'oppositions."
     user: 
       name: "Agenda de {{user_name}}"
       obama: 
@@ -780,7 +780,7 @@ fr:
         name: "Supprimer le signalement"
       confirm: "Ce commentaire de {{user_name}} est-il une attaque personnelle ou une violation des règles ? "
       issue_warning: 
-        action: "Administrer l'avertissement #{{warnings_count}}  à {{user_name}}"
+        action: "Administrer l'avertissement n°{{warnings_count}}  à {{user_name}}"
         ing: "Envoi de l'avertissement"
         name: "Administrer un avertissement"
       number: 
@@ -1040,12 +1040,12 @@ fr:
       title: "Cliquer sur X pour enlever la priorité de votre liste"
     empty: "Vous n'avez encore soutenu aucune priorité. Pour plus d'inspiration, pourquoi ne consulteriez-vous pas quelques <a href='/priorities/random'>priorités au hasard</a> ? "
     name: 
-      one: "1 pour"
-      other: "{{count}} pour"
+      one: "1 soutien"
+      other: "{{count}} soutiens"
     position: 
       title: "Cliquez sur le nombre pour changer sa position dans votre liste. Vous pouvez également faire glisser les noms pour les trier. "
-      yours: "Votre priorité #{{position}}. "
-    priority1: "Priorité #1 :"
+      yours: "Votre priorité n°{{position}}. "
+    priority1: "Priorité n°1 :"
     save: Enregistrer
   facebook: 
     invite: 
@@ -1068,7 +1068,7 @@ fr:
     rss: "Flux RSS"
     via: "via {{source}} "
   follow: 
-    capitalize: S'abonner
+    capitalize: Suivre
     delete: 
       title: "Retirer cette personne de votre réseau"
     ing: Abonné
@@ -1319,9 +1319,9 @@ fr:
       your_priorities: "Vos priorités"
       yours: "Vos priorités"
     charts: 
-      active_issues: "{{tags_name}} les plus actifs"
+      active_issues: "{{tags_name}} les plus actives"
       falling: "Agendas en baisse"
-      name: "Graphiques et statistiques"
+      name: "Classements et statistiques"
       rising: "Agendas en hausse"
     color_schemes: 
       advanced: Avancé
@@ -1807,8 +1807,8 @@ fr:
     you: "VOUS REJETEZ"
   oppositions: 
     name: 
-      one: "1 rejet"
-      other: "{{count}} rejets"
+      one: "1 opposition"
+      other: "{{count}} oppositions"
   or: OU
   pages: 
     destroy: "{{page_name}} supprimée"
@@ -2100,8 +2100,8 @@ fr:
           short: "pas de changement cette semaine"
       nochange: 
         title: "Cette priorité n'a pas changé de place dans le classement au cours de ce mois. "
-      number: "Priorité #{{position}} "
-      title: "C'est la #{{position}}e plus haute priorité parmi tous les membres de {{government_name}}. "
+      number: "Priorité n°{{position}} "
+      title: "C'est la {{position}}e plus haute priorité parmi tous les membres de {{government_name}}. "
       up: 
         24hr: 
           one: "Cette priorité est descendue d'une place dans le classement au cours de ces dernières 24 heures"
@@ -2169,17 +2169,17 @@ fr:
       same: "C'est à peu près pareil"
     endorse: 
       moved: 
-        msg: "Priorité {{priority_name}} montée en position #{{position}} "
-      msg: "Ajouté la priorité {{priority_name}} en position #{{position}} "
+        msg: "Priorité n°{{priority_name}} montée en position n°{{position}} "
+      msg: "Ajouté la priorité n°{{priority_name}} en position n°{{position}} "
     explanation: "Ceci est une nouvelle fonctionnalité expérimentale conçue pour faciliter la création et la modification d'une longue liste.<p>Elle vous demandera si vous soutenez ou vous vous opposez à une priorité, mais fonctionne aussi un peu comme une <a href='http://www.thetennisladder.com/whatisatennisladder.asp'>échelle de tennis</a>, en affichant deux priorités assez proches dans votre liste en demandant laquelle est la plus importante. Si vous décidez que celle de priorité la plus basse est plus importante, celle-ci montera plus haut. "
     index: 
       title: "Questionnaire de priorités {{government_name}}"
     oppose: 
       moved: 
-        msg: "Monté l'opposition à {{priority_name}} en position #{{position}} "
-      msg: "Opposition à {{priority_name}} en priorité #{{position}} "
+        msg: "Monté l'opposition à {{priority_name}} en position n°{{position}} "
+      msg: "Opposition à {{priority_name}} en priorité n°{{position}} "
     same: 
-      msg: "Déplacées en priorités #{{position}} et #{{position2}} "
+      msg: "Déplacées en priorités n°{{position}} et n°{{position2}} "
   processing: Traitement…
   profiles: 
     new: 
@@ -2314,8 +2314,8 @@ fr:
     name: Passer
   splash: 
     endorsements: 
-      one: "Priorité #{{position}}, soutenue par 1 personne, et à laquelle {{oppose_count}} autres s'opposent."
-      other: "Priorité #{{position}}, soutenue par {{count}} personnes, et à laquelle {{oppose_count}} autres s'opposent."
+      one: "Priorité n°{{position}}, soutenue par 1 personne, et à laquelle {{oppose_count}} autres s'opposent."
+      other: "Priorité n°{{position}}, soutenue par {{count}} personnes, et à laquelle {{oppose_count}} autres s'opposent."
     enter: "Entrer sur le site"
     index: 
       title: "Regarder ce que les gens font sur {{government_name}} "
@@ -2404,7 +2404,7 @@ fr:
     week: Semaine
     wk: sem
     yday: Hier
-  unch: Inchangé
+  unch: INCHANGÉ
   unhelpful: 
     both: 
       one: "1 personne a trouvé que ceci n'était <i>pas</i> utile, {{other_count}} autres non."
@@ -2508,7 +2508,7 @@ fr:
     issues: 
       title: "{{tags_name}} où est impliqué {{user_name}}"
     joined: "Inscrit(e) {{time_ago}} "
-    last_visit: "Dernière visite il y a {{time_ago}} "
+    last_visit: "Dernière visite {{time_ago}} "
     legislators: 
       title: "Législateurs pour {{user_name}} "
     make_admin: "{{user_name}}  est à présent Administrateur"
