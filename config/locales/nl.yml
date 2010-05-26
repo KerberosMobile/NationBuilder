@@ -585,11 +585,11 @@ nl:
     documents: 
       needed: 
         empty: "Al je prioriteiten hebben minstens één document."
-      title: "Je prioriteiten zonder documenten"
+      title: "Mijn prioriteiten zonder documenten"
     points: 
       needed: 
         empty: "Al je prioriteiten hebben minstens één standpunt dat jouw mening ondersteunt"
-      title: "Je prioriteiten zonder standpunten"
+      title: "Mijn prioriteiten zonder standpunten"
     search: 
       blank: "Geef een zoekterm in"
       documents: 
@@ -1013,7 +1013,7 @@ nl:
     your_priorities: 
       title: "Meest recente documenten over jouw prioriteiten"
     yours: 
-      title: "Jouw documenten"
+      title: "Mijn documenten"
   doit: JA
   dont: NEE
   email_templates: 
@@ -1027,9 +1027,9 @@ nl:
     capitalize: Steun
     delete: 
       title: "Verwijder van mijn lijst met prioriteiten"
-    ed: gesteund
+    ed: voor
     ing: Gesteund
-    name: steun
+    name: voor
     people: Medestanders
     plural: medestanders
     title: "I steun dit, voeg het toe aan mijn prioriteitenlijst"
@@ -1044,7 +1044,7 @@ nl:
       other: "{{count}} steunbetuigingen"
     position: 
       title: "Klik op het getal om de positie in je lijst te wijzigen. Je kan de namen ook slepen om de volgorde te wijzigen."
-      yours: "Jouw {{position}}e prioriteit."
+      yours: "Mijn {{position}}e prioriteit."
     priority1: Topprioriteit
     save: bewaar
   facebook: 
@@ -1223,13 +1223,13 @@ nl:
       received: "Ontvangen:"
       sent: "Verstuurd:"
       to: "Aan:"
-    index: "Je persoonlijke berichten"
-    notifications: "Je meldingen"
+    index: "Mijn persoonlijke berichten"
+    notifications: "Mijn meldingen"
     sent: "Persoonlijke berichten die jij verzond"
   install: 
     admin_user: 
       heading: "Maak nu je beheersaccount aan"
-      submit: "Bewaar je account"
+      submit: "Bewaar mijn account"
     new: 
       heading: "Welkom bij NationBuilder!"
     welcome: 
@@ -1315,8 +1315,8 @@ nl:
         name: herzieningen
         one: "1 herziening"
         other: "{{count}} herzieningen"
-      your_priorities: "Jouw prioriteiten"
-      yours: "Van jou"
+      your_priorities: "Mijn prioriteiten"
+      yours: Mijn
     charts: 
       active_issues: "Meest actieve {{tags_name}}"
       falling: "Dalende agenda's"
@@ -1332,7 +1332,7 @@ nl:
       number: 
         one: "Je hebt 1 contact"
         other: "Je hebt {{count}} contacten"
-      your_network: "Jouw netwerk"
+      your_network: "Mijn netwerk"
     documents: 
       name: Documenten
     inbox: 
@@ -1366,7 +1366,7 @@ nl:
       twitterers: Twitteraars
       unverified: "Niet geverifiëerd"
       warnings: Waarschuwingen
-      yours: "Jouw netwerk"
+      yours: "Mijn netwerk"
     news: 
       acquisitions: "Fusies en overnames"
       activity: "Alle activiteit"
@@ -1384,13 +1384,13 @@ nl:
       proposals: Voorstellen
       voting: Stemresultaten
       what: "Wat gebeurt er?"
-      your_activity: "Je activiteit"
-      your_followers: "Je volgers"
-      your_network: "Je netwerk"
-      your_priorities: "Jouw prioriteiten"
-      yours: "Van jou"
+      your_activity: "Mijn activiteit"
+      your_followers: "Mijn volgers"
+      your_network: "Mijn netwerk"
+      your_priorities: "Mijn prioriteiten"
+      yours: Mijn
     next_steps: 
-      bio: "Voeg toe aan je CV"
+      bio: "Vertel iets over jezelf"
       branches: "De groep waar je best in past:"
       comments: "Debatteer mee over jouw prioriteiten"
       facebook_friends: "Nodig je Facebook vrienden uit"
@@ -1400,7 +1400,7 @@ nl:
       outro: "Je kan meewerken wanneer en hoe vaak je wil. We zijn 24 uur per dag open."
       people_you_know: "Vind mensen die je kent"
       picture: "Voeg een foto toe"
-      points: "Schrijf standpunten voor jouw prioriteiten"
+      points: "Schrijf standpunten voor je prioriteiten"
     pages: 
       new: "Maak een nieuwe pagina aan"
     partner: 
@@ -1465,8 +1465,8 @@ nl:
         title: "Markeer deze prioriteit als 'wordt aan gewerkt'"
       name: Prioriteiten
       network: 
-        name: "Prioriteiten van jouw netwerk"
-        short: "Jouw netwerk"
+        name: "Prioriteiten van mijn netwerk"
+        short: "Mijn netwerk"
       official: 
         agenda_endorsed: Gesteund
         agenda_not: "Niet op de agenda"
@@ -1491,8 +1491,8 @@ nl:
         created: "Prioriteiten die je aangemaakt hebt"
         finished: Afgewerkt
         lowest: "Laagst gerangschikt"
-        name: "Jouw prioriteiten"
-        short: Jouw
+        name: "Mijn prioriteiten"
+        short: Mijn
         top: "Hoogst gerangschikt"
     profile: 
       admin: Beheerder
@@ -1527,7 +1527,7 @@ nl:
         name: "Reactiveer deze gebruiker"
         title: "Reactiveer deze gebruiker"
     settings: 
-      account: "Jouw account"
+      account: "Mijn account"
       bio: CV
       emails: "Email meldingen"
       legislators: Volksvertegenwoordigers
@@ -1538,7 +1538,7 @@ nl:
       discussions: 
         name: "Widgets voor debatten"
         short: Debatten
-      name: "Widgets voor jouw site"
+      name: "Widgets voor je site"
       points: 
         name: "Widgets voor standpunten"
         short: Standpunten
@@ -1546,7 +1546,7 @@ nl:
         name: "Widgets voor prioriteiten"
         short: Prioriteiten
   messages: 
-    index: "Je persoonlijk gesprek met {{user_name}}"
+    index: "Mijn persoonlijk gesprek met {{user_name}}"
     new: 
       submit: "Stuur een persoonlijk bericht"
     previously_read: "Eerder gelezen berichten "
@@ -1570,7 +1570,7 @@ nl:
       title: "Ontdek de meest invloedrijke personen in {{government_name}}"
     inyournetwork: 
       one: "1 persoon in je netwerk"
-      other: "{{count}} personen in je netwerk"
+      other: "{{count}} personen in mijn netwerk"
     newest: 
       title: "Nieuwe leden in {{government_name}}"
     partners: 
@@ -1612,34 +1612,34 @@ nl:
     your_activities: 
       title: "Wat ben je aan het doen in {{government_name}}?"
     your_capital: 
-      title: "Jouw {{currency_name}} in {{government_name}}"
+      title: "Mijn {{currency_name}} in {{government_name}}"
     your_changes: 
-      title: "Jouw overname activiteit in {{government_name}}"
+      title: "Mijn overname activiteit in {{government_name}}"
     your_discussions: 
-      name: "Jouw debatten"
+      name: "Mijn debatten"
       title: "Debatten die je volgt in {{government_name}}"
     your_followers_activities: 
-      title: "Activiteit van je volgers in {{government_name}}"
+      title: "Activiteit van mijn volgers in {{government_name}}"
     your_followers_capital: 
-      title: "Het {{currency_name}} van je volgers"
+      title: "{{currency_name}} van mijn volgers"
     your_followers_changes: 
-      title: "Overname activiteit van je volgers"
+      title: "Overname activiteit van mijn volgers"
     your_followers_discussions: 
-      title: "Debatten waar je volgers in betrokken zijn"
+      title: "Debatten waar mijn volgers in betrokken zijn"
     your_followers_points: 
       title: "Standpunten en documenten van je volgers"
     your_network_activities: 
-      title: "Wat gebeurt er in jouw {{government_name}}?"
+      title: "Wat gebeurt er in mijn {{government_name}}?"
     your_network_capital: 
-      title: "{{currency_name}} in je netwerk"
+      title: "{{currency_name}} in mijn netwerk"
     your_network_changes: 
-      title: "Overname activiteit in je netwerk"
+      title: "Overname activiteit in mijn netwerk"
     your_network_discussions: 
-      title: "Debatten in je netwerk"
+      title: "Debatten in mijn netwerk"
     your_network_points: 
-      title: "Standpunten en documenten in je netwerk"
+      title: "Standpunten en documenten in mijn netwerk"
     your_points: 
-      title: "Jouw {{briefing_name}} activiteit in {{government_name}}"
+      title: "Mijn {{briefing_name}} activiteit in {{government_name}}"
     your_priorities_created_activities: 
       title: "Alles wat er gebeurt rond de prioriteiten die jij aangemaakt hebt"
     your_priorities_created_changes: 
@@ -1651,19 +1651,19 @@ nl:
     your_priorities_created_points: 
       title: "{{briefing_name}} activiteit rond prioriteiten die jij aangemaakt hebt"
     your_priority_activities: 
-      title: "Wat gebeurt er rond jouw prioriteiten?"
+      title: "Wat gebeurt er rond mijn prioriteiten?"
     your_priority_changes: 
-      title: "Overnamevoorstellen over jouw prioriteiten"
+      title: "Overnamevoorstellen over mijn prioriteiten"
     your_priority_changes_activity: 
-      title: "Overname activiteit rond jouw prioriteiten"
+      title: "Overname activiteit rond mijn prioriteiten"
     your_priority_changes_voting: 
       title: "Overnames om over te stemmen"
     your_priority_discussions: 
-      title: "Debatten over jouw prioriteiten"
+      title: "Debatten over mijn prioriteiten"
     your_priority_obama: 
-      title: "Wat {{official_user_name}} doet rond jouw prioriteiten"
+      title: "Wat {{official_user_name}} doet rond mijn prioriteiten"
     your_priority_points: 
-      title: "Standpunten en documenten over jouw prioriteiten"
+      title: "Standpunten en documenten over mijn prioriteiten"
   nochange: "geen wijziging"
   none: GEEN
   notification: 
@@ -1685,8 +1685,8 @@ nl:
         link: "{{sender_name}} reageerde op <a href='{{comment_url}}'>activiteit van {{user_name}}</a>"
         name: "{{sender_name}} reageerde op activiteit van {{user_name}}"
         yours: 
-          link: "{{sender_name}} reageerde op <a href='{{comment_url}}'>jouw activiteit</a>"
-          name: "{{sender_name}} reageerde op jouw activiteit"
+          link: "{{sender_name}} reageerde op <a href='{{comment_url}}'>je activiteit</a>"
+          name: "{{sender_name}} reageerde op je activiteit"
       flagged: 
         link: 
           one: "1 gemarkeerde reactie"
@@ -1796,7 +1796,7 @@ nl:
       title: "Verwijder van mijn lijst van prioriteiten"
     ed: tegen
     ing: "Je bent tegen"
-    name: "stem tegen"
+    name: tegen
     people: Tegenstanders
     plural: "is tegen"
     title: "Is ben hier tegen en ik wil mijn tegenkanting toevoegen aan mijn lijst met prioriteiten."
@@ -1875,7 +1875,7 @@ nl:
       current: 
         label: "Huidig paswoord"
       email: 
-        label: "Jouw email adres"
+        label: "Je email adres"
       facebook: "Je paswoord wordt beheerd door Facebook, niet door {{government_name}}. Klik op de Facebook knop om aan te melden."
       nevermind: "Laat maar, ik weet het weer"
       new: 
@@ -1964,9 +1964,9 @@ nl:
     update: 
       success: "{{point_name}} werd bewaard"
     your_priorities: 
-      title: "Standpunten voor jouw prioriteiten"
+      title: "Standpunten voor mijn prioriteiten"
     yours: 
-      title: "Jouw standpunten"
+      title: "Mijn standpunten"
   priorities: 
     activities: 
       title: "Activiteit rond {{priority_name}}"
@@ -2030,8 +2030,8 @@ nl:
         none: "Er zit niemand meer in je netwerk omdat je niemand meer volgt."
         one: "Hier staan enkel jouw prioriteiten en die van de andere persoon in <a href='{{url}}'>je netwerk</a>, niet alles in {{government_name}}"
         other: "Hier staan enkel jouw prioriteiten en die van de {{count}} andere personen in <a href='{{url}}'>je netwerk</a>, niet alles in {{government_name}}"
-      name: "Prioriteiten van je netwerk"
-      title: "Prioriteiten van je netwerk"
+      name: "Prioriteiten van mijn netwerk"
+      title: "Prioriteiten van mijn netwerk"
     neutral_documents: 
       title: "Documenten over {{priority_name}}"
     neutral_points: 
@@ -2040,12 +2040,12 @@ nl:
       blank: "Tik hier je prioriteit, of klik op de steun knop onder een bestaande prioriteit om ze aan je lijst toe te voegen."
       check: 
         name: "De prioriteit die je net hebt ingegeven:"
-        one: "Voor we jouw prioriteit toevoegen, kijk even of <b>{{priority_name}}</b> ook voldoet. In groep zal je steunbetuiging zwaarder wegen."
-        other: "Voor we jouw prioriteit toevoegen, kijk even of één van deze prioriteiten ook voldoet. In groep zal je steunbetuiging zwaarder wegen."
+        one: "Voor we jouw prioriteit toevoegen, kijk even of <b>{{priority_name}}</b> ook voldoet. In groep zal je stem zwaarder wegen."
+        other: "Voor we jouw prioriteit toevoegen, kijk even of één van deze prioriteiten ook voldoet. In groep zal je stem zwaarder wegen."
       click: 
         one: "Klik <span class='priority_add'>STEUN</span> als deze prioriteit jouw visie ook dekt."
         other: "Klik <span class='priority_add'>STEUN</span> als één van deze prioriteiten jouw visie ook dekt."
-      need_account: "Je moet eerst dit korte formulier invullen en dan je je prioriteiten voor {{target}} beginnen ingeven."
+      need_account: "Je moet eerst dit korte formulier invullen en dan kan je je prioriteiten voor {{target}} ingeven."
       submit: "Maak een prioriteit"
       success: "Bedankt voor het toevoegen van {{priority_name}}"
       suggest: "En klik nu ook 'Stel voor'"
@@ -2139,12 +2139,12 @@ nl:
       title: "Prioriteiten zonder tags (of categorie)"
     yours: 
       heading: "Prioriteiten van {{user_name}}"
-      name: "Jouw prioriteiten"
+      name: "Mijn prioriteiten"
       outro: "Je kan ook alle <a href='/news/your_priorities_created_activities'>activiteit</a> en <a href='/news/your_priorities_created_discussions'>debatten</a> volgen rond je prioriteiten."
       prompt: "Voeg een prioriteit toe aan je lijst"
-      title: "Jouw prioriteiten in {{government_name}}"
+      title: "Mijn prioriteiten in {{government_name}}"
     yours_ads: 
-      title: "Jouw advertenties"
+      title: "Mijn advertenties"
     yours_created: 
       intro: "Hier komen alle prioriteiten die je aangemaakt hebt, zodat je ze makkelijk terugvind en kan opvolgen."
       name: "Prioriteiten die jij hebt aangemaakt"
@@ -2152,12 +2152,12 @@ nl:
       title: "Prioriteiten die je hebt aangemaakt in {{government_name}}"
     yours_finished: 
       intro: "Zoals bij een todo-lijstje vallen alle afgewerkte prioriteiten waar je je over uitgesproken hebt van de lijst en komen ze hier terecht."
-      name: "Jouw afgewerkte prioriteiten"
-      title: "Jouw afgewerkte prioriteiten in {{government_name}}"
+      name: "Mijn afgewerkte prioriteiten"
+      title: "Mijn afgewerkte prioriteiten in {{government_name}}"
     yours_lowest: 
-      title: "Jouw prioriteiten die het laagst gerangschikt worden door leden van {{government_name}}"
+      title: "Mijn prioriteiten die het laagst gerangschikt worden door leden van {{government_name}}"
     yours_top: 
-      title: "Jouw prioriteiten die het hoogst gerangschikt worden door leden van {{government_name}}"
+      title: "Mijn prioriteiten die het hoogst gerangschikt worden door leden van {{government_name}}"
   prioritizer: 
     duel: 
       question: "Welke prioriteit is belangrijker?"
@@ -2185,7 +2185,7 @@ nl:
       intro: "Je CV komt bovenaan je <a href='{{url}}'>profielpagina</a>, net boven je top 5 prioriteiten"
       submit: "Bewaar je CV"
       success: "CV bewaard"
-      title: "Je CV op {{government_name}}"
+      title: "Mijn CV op {{government_name}}"
   rank: Plaats
   revisions: 
     activity: 
@@ -2273,7 +2273,7 @@ nl:
         example: "(Dit kan je naam zijn, of een pseudoniem)"
         label: "Hoe wil je gekend zijn op de site?"
       other_sites: 
-        label: "Je login namen voor populaire websites"
+        label: "Mijn login namen voor populaire websites"
       state: 
         label: Provincie
       submit: "Bewaar je instellingen"
@@ -2282,19 +2282,19 @@ nl:
       zip: 
         label: Postcode
     index: 
-      title: "Je instellingen voor {{government_name}}"
+      title: "Mijn instellingen voor {{government_name}}"
     legislators: 
       error: "Fout bij het bewaren van je adres"
       found_all: "Je volksvertegenwoordigers werden gevonden en toegevoegd"
       found_none: "We konden je volksvertegenwoordigers niet vinden, controleer even je adres"
       found_senators: "We konden alleen senatoren vinden, we hebben je volledige adres nodig om je plaatselijke vertegenwoordiger op te zoeken."
       submit: "Zoek volksvertegenwoordigers op"
-      title: "Jouw volksvertegenwoordigers"
+      title: "Mijn volksvertegenwoordigers"
     notifications: 
-      title: "Je email meldingen"
+      title: "Mijn email meldingen"
     optional: Optioneel
     picture: 
-      title: "Je foto"
+      title: "Mijn foto"
       upload: "Upload je foto"
     required: Vereist
     saved: "Je instellingen werden bewaard"
@@ -2352,7 +2352,7 @@ nl:
     finished: 
       title: "Afgewerkte prioriteiten over {{tag_name}}"
     network: 
-      title: "Prioriteiten van je netwerk over {{tag_name}}"
+      title: "Prioriteiten van mijn netwerk over {{tag_name}}"
     new: 
       name: "Nieuwe {{tags_name}}"
       submit: "Bewaar {{tags_name}}"
@@ -2383,11 +2383,11 @@ nl:
     twitter: 
       title: "Wat mensen zeggen over {{tag_name}}"
     yours: 
-      title: "Jouw prioriteiten over {{tag_name}}"
+      title: "Mijn prioriteiten over {{tag_name}}"
     yours_created: 
       title: "Prioriteiten over {{tag_name}} die jij hebt aangemaakt"
     yours_finished: 
-      title: "Jouw afgewerkte prioriteiten over {{tag_name}}"
+      title: "Mijn afgewerkte prioriteiten over {{tag_name}}"
   time: 
     am: am
     formats: 
@@ -2438,14 +2438,14 @@ nl:
         other: "{{count}} onbeslisten vonden dit <i>niet</i>nuttig"
   unsubscribe: 
     admin: "Voor beheerders"
-    comments: "Reacties op je debatten"
+    comments: "Reacties op mijn debatten"
     finished: "Wanneer prioriteiten afgewerkt zijn"
     followers: "Wanneer iemand je begint te volgen, of één van je contacten lid wordt"
     messages: "Persoonlijke boodschappen en profielberichten"
     new: 
       intro: "Vink de meldingen die je niet wil uit"
       submit: "Pas email meldingen aan"
-    points: "Herzieningen van jouw documenten en standpunten"
+    points: "Herzieningen van je documenten en standpunten"
     success: "Je zal geen emails meer ontvangen van {{government_name}}"
     votes: "Wanneer je stem nodig is voor een overname"
     weekly: "Wekelijks overzicht van je prioriteiten"
